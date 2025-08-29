@@ -36,7 +36,9 @@ export default function RootLayout({
           />
           <main className="relative z-10 h-full w-full">
             <Navbar />
-            {children}
+            <div className="max-w-6xl mx-auto xl:px-0 px-3 overflow-x-hidden">
+              {children}
+            </div>
           </main>
         </div>
       </body>
