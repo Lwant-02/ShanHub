@@ -1,14 +1,16 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { House, Info } from "lucide-react";
+import { House, Info, Languages, User } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+
+import { cn } from "@/lib/utils";
 
 const navItem = [
   {
     label: "ၼႃႈႁိူၼ်း",
-    href: "/home",
+    href: "/dashboard",
     icon: <House className="size-4" />,
   },
   {
@@ -21,16 +23,26 @@ const navItem = [
 export default function Navbar() {
   const pathName = usePathname();
 
+  const handleLogin = () => {
+    // TODO: Implement login
+    alert("Login");
+  };
+
   return (
-    <nav className="h-20 w-full top-0 sticky z-50">
+    <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      className="h-20 w-full top-0 sticky z-50"
+    >
       <div className="flex justify-between items-center h-full max-w-6xl mx-auto xl:px-0 px-3">
-        <Link href="/" className="font-secondary text-2xl">
+        <Link href="/" className="condary text-2xl">
           ShanHub
         </Link>
-        <div className="flex justify-center items-center gap-7">
-          {navItem.map((item) => (
+        <div className="xl:flex hidden justify-center items-center gap-7">
+          {navItem.map((item, index) => (
             <Link
-              key={item.href}
+              key={index}
               href={item.href}
               className={cn(
                 "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
@@ -41,8 +53,26 @@ export default function Navbar() {
               <span className="text-base text-center">{item.label}</span>
             </Link>
           ))}
+          <button
+            onClick={handleLogin}
+            className={cn(
+              "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300 cursor-pointer"
+            )}
+          >
+            <Languages className="size-4" />
+            <span className="text-base text-center">Language</span>
+          </button>
+          <button
+            onClick={handleLogin}
+            className={cn(
+              "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300 cursor-pointer"
+            )}
+          >
+            <User className="size-4" />
+            <span className="text-base text-center">Login</span>
+          </button>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
