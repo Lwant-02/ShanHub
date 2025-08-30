@@ -1,0 +1,96 @@
+"use client";
+
+import { Marquee } from "@/components/Marquee";
+import { TestimonialCard } from "./TestimonialCard";
+import AnimateOnview from "@/components/AnimateOnview";
+
+const testimonials = [
+  {
+    name: "ၸၢၼ်ႈမၢင်း",
+    content:
+      "ShanHub has revolutionized how I teach Shan language to my students.",
+    contentShan: "ShanHub ယဝ်ႉ လူၵ်ႈပိၼ်ႇ ၸၢၼ်ႈလိၵ်ႈ ၶူး ၸိူဝ်းၸႂ်ႉတိုဝ်း",
+    avatar: "",
+  },
+  {
+    name: "ၼၢင်းၼမ်",
+    content: "Learning Shan has never been easier with these amazing tools.",
+    contentShan: "ၸၢၼ်ႈလိၵ်ႈ ႁဵၼ်းၸူး ၸိူဝ်းၸႂ်ႉတိုဝ်း လႄႈ ၸႂ်ႉတိုဝ်း",
+    avatar: "",
+  },
+  {
+    name: "ၸၢၼ်ႈၶမ်း",
+    content:
+      "The API and tools provided by ShanHub are exceptional for building Shan apps.",
+    contentShan:
+      "ShanHub ယဝ်ႉ API လႄႈ ၸိူဝ်းၸႂ်ႉတိုဝ်း ၸၢၼ်ႈအႅပ်ႇ ၸိူဝ်းၸႂ်ႉတိုဝ်း",
+    avatar: "",
+  },
+  {
+    name: "ၸၢၼ်ႈမၢင်း",
+    content:
+      "ShanHub has revolutionized how I teach Shan language to my students.",
+    contentShan: "ShanHub ယဝ်ႉ လူၵ်ႈပိၼ်ႇ ၸၢၼ်ႈလိၵ်ႈ ၶူး ၸိူဝ်းၸႂ်ႉတိုဝ်း",
+    avatar: "",
+  },
+  {
+    name: "ၼၢင်းၼမ်",
+    content: "Learning Shan has never been easier with these amazing tools.",
+    contentShan: "ၸၢၼ်ႈလိၵ်ႈ ႁဵၼ်းၸူး ၸိူဝ်းၸႂ်ႉတိုဝ်း လႄႈ ၸႂ်ႉတိုဝ်း",
+    avatar: "",
+  },
+  {
+    name: "ၼၢင်းၼမ်",
+
+    content: "Learning Shan has never been easier with these amazing tools.",
+    contentShan: "ၸၢၼ်ႈလိၵ်ႈ ႁဵၼ်းၸူး ၸိူဝ်းၸႂ်ႉတိုဝ်း လႄႈ ၸႂ်ႉတိုဝ်း",
+    avatar: "",
+  },
+  {
+    name: "ၼၢင်းၼမ်",
+
+    content: "Learning Shan has never been easier with these amazing tools.",
+    contentShan: "ၸၢၼ်ႈလိၵ်ႈ ႁဵၼ်းၸူး ၸိူဝ်းၸႂ်ႉတိုဝ်း လႄႈ ၸႂ်ႉတိုဝ်း",
+    avatar: "",
+  },
+  {
+    name: "ၼၢင်းၼမ်",
+    content: "Learning Shan has never been easier with these amazing tools.",
+    contentShan: "ၸၢၼ်ႈလိၵ်ႈ ႁဵၼ်းၸူး ၸိူဝ်းၸႂ်ႉတိုဝ်း လႄႈ ၸႂ်ႉတိုဝ်း",
+    avatar: "",
+  },
+];
+
+export const Testimonial = () => {
+  return (
+    <section className="py-14 mt-14 px-4 ">
+      <div className="max-w-6xl mx-auto">
+        <AnimateOnview>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+                What Our Community Says
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Hear from our users about their experiences with ShanHub
+            </p>
+          </div>
+        </AnimateOnview>
+        <AnimateOnview>
+          <div className="w-full h-full overflow-hidden">
+            <Marquee direction="left">
+              {testimonials.map((testimonial, index) => (
+                <TestimonialCard
+                  key={`testimonial-${index}`}
+                  testimonial={testimonial}
+                  index={index}
+                />
+              ))}
+            </Marquee>
+          </div>
+        </AnimateOnview>
+      </div>
+    </section>
+  );
+};

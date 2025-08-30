@@ -10,7 +10,6 @@
   --color-green: var(--green);
   --color-forceground: var(--forceground);
   --font-primary: var(--font-padauk);
-  --font-secondary: var(--font-inter);
 }
 
 :root {
@@ -19,7 +18,6 @@
   --green: #67c090;
   --forceground: #222831;
   --font-primary: "Padauk", sans-serif;
-  --font-secondary: "Inter", sans-serif;
 }
 
 @layer base {
@@ -28,11 +26,5 @@
   }
   body {
     @apply text-primary font-primary;
-  }
-}
-
-@keyframes move-bg {
-  to {
-    background-position: 400% 0;
   }
 }

@@ -26,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${padauk.variable} ${inter.variable} antialiased`}>
+      <body
+        className={`${padauk.variable} ${inter.variable} antialiased`}
+        suppressHydrationWarning={true}
+      >
         <div className="min-h-screen w-full bg-[#020617] relative">
           <div
             className="absolute inset-0 z-0"
