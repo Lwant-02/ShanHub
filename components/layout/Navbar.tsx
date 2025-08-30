@@ -2,12 +2,15 @@
 
 import { House, Info, Languages, User } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
+import { MobileNav } from "./MobileNav";
+import { LoginModal } from "../features/auth/LoginModal";
 
-const navItem = [
+export const navItem = [
   {
     label: "ၼႃႈႁိူၼ်း",
     href: "/dashboard",
@@ -22,57 +25,85 @@ const navItem = [
 
 export default function Navbar() {
   const pathName = usePathname();
+  const [isUserScrolled, setIsUserScrolled] = useState(false);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   const handleLogin = () => {
-    // TODO: Implement login
-    alert("Login");
+    setIsLoginModalOpen(true);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsUserScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <motion.nav
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-      className="h-20 w-full top-0 sticky z-50"
-    >
-      <div className="flex justify-between items-center h-full max-w-6xl mx-auto xl:px-0 px-3">
-        <Link href="/" className="condary text-2xl">
-          ShanHub
-        </Link>
-        <div className="xl:flex hidden justify-center items-center gap-7">
-          {navItem.map((item, index) => (
-            <Link
-              key={index}
-              href={item.href}
+    <>
+      <motion.nav
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className={cn("h-20 w-full top-0 sticky z-50", {
+          "bg-black/50 backdrop-blur-sm": isUserScrolled,
+        })}
+      >
+        <div className="flex justify-between items-center h-full max-w-6xl mx-auto xl:px-0 px-3">
+          <Link href="/" className="condary text-2xl">
+            ShanHub
+          </Link>
+          <div className="xl:flex hidden justify-center items-center gap-7">
+            {navItem.map((item, index) => (
+              <Link
+                key={index}
+                href={item.href}
+                className={cn(
+                  "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
+                  pathName.endsWith(item.href) && "text-green"
+                )}
+              >
+                {item.icon}
+                <span className="text-base text-center">{item.label}</span>
+              </Link>
+            ))}
+            <button
+              type="button"
               className={cn(
-                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
-                pathName.endsWith(item.href) && "text-green"
+                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300 cursor-pointer"
               )}
             >
-              {item.icon}
-              <span className="text-base text-center">{item.label}</span>
-            </Link>
-          ))}
-          <button
-            onClick={handleLogin}
-            className={cn(
-              "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300 cursor-pointer"
-            )}
-          >
-            <Languages className="size-4" />
-            <span className="text-base text-center">Language</span>
-          </button>
-          <button
-            onClick={handleLogin}
-            className={cn(
-              "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300 cursor-pointer"
-            )}
-          >
-            <User className="size-4" />
-            <span className="text-base text-center">Login</span>
-          </button>
+              <Languages className="size-4" />
+              <span className="text-base text-center">Language</span>
+            </button>
+            <button
+              type="button"
+              onClick={handleLogin}
+              className={cn(
+                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300 cursor-pointer"
+              )}
+            >
+              <User className="size-4" />
+              <span className="text-base text-center">Login</span>
+            </button>
+          </div>
+          <div className="xl:hidden flex justify-center items-center">
+            <MobileNav
+              handleLogin={handleLogin}
+              open={isMobileNavOpen}
+              onOpenChange={setIsMobileNavOpen}
+            />
+          </div>
         </div>
-      </div>
-    </motion.nav>
+      </motion.nav>
+
+      <LoginModal open={isLoginModalOpen} onOpenChange={setIsLoginModalOpen} />
+    </>
   );
 }

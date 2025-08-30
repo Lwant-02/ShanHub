@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 
 interface ParticleTextProps {
   text?: string;
@@ -68,18 +67,15 @@ export const ParticleText: React.FC<ParticleTextProps> = ({
 
   return (
     <div ref={containerRef} className={`relative inline-block ${className}`}>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="text-4xl md:text-6xl font-bold relative z-10"
+      <div
+        className="text-4xl md:text-7xl font-bold relative z-10 bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent"
         style={{
-          textShadow: `0 0 20px ${particleColor}40`,
+          textShadow: `0 0 20px ${particleColor}10`,
           filter: `drop-shadow(0 0 10px ${particleColor}60)`,
         }}
       >
         {text}
-      </motion.div>
+      </div>
     </div>
   );
 };

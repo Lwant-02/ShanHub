@@ -44,7 +44,7 @@ export default function ShimmerButton({
             animation: "shimmer-spin 2.5s linear infinite",
           }}
         />
-        <span className="relative z-10 inline-flex items-center justify-center w-full h-full px-6 py-3 bg-black/90 rounded-full shadow-green-500/50  ">
+        <span className="text-lg font-medium relative z-10 inline-flex items-center justify-center w-full h-full px-8 py-3 bg-black/90 rounded-full shadow-green-500/50  ">
           {text}
         </span>
       </Link>
