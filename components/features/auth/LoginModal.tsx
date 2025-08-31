@@ -5,6 +5,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { useTranslations } from "next-intl";
 
 const GoogleIcon = () => (
   <svg
@@ -39,19 +40,23 @@ interface LoginModalProps {
 }
 
 export const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
+  const t = useTranslations("Auth");
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-black/50 backdrop-blur-sm border border-green/50 ">
+      <DialogContent className="bg-black/70 backdrop-blur-sm border border-green/20 rounded-2xl ">
         <DialogHeader>
-          <DialogTitle className="text-2xl">
-            Easy Access with Google
+          <DialogTitle className="text-2xl bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+            {t("title")}
           </DialogTitle>
           <DialogDescription className="text-xl opacity-90">
-            Login to your account with your Google account.
+            {t("sub_title")}
           </DialogDescription>
-          <button className="flex gap-2 mt-2 cursor-pointer items-center justify-center bg-white/10 hover:bg-white/20 transition-all duration-300 rounded-lg p-3">
+          <button
+            type="button"
+            className="flex gap-2 mt-2 cursor-pointer items-center justify-center bg-white/10 hover:bg-white/20 transition-all duration-300 rounded-2xl p-3"
+          >
             <GoogleIcon />
-            <span className="text-lg">Continue with Google</span>
+            <span className="text-lg">{t("btn_text")}</span>
           </button>
         </DialogHeader>
       </DialogContent>

@@ -1,5 +1,5 @@
 "use client";
-import { Languages, Menu, User, X } from "lucide-react";
+import { House, Info, Languages, Menu, User, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import {
@@ -8,9 +8,21 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { navItem } from "./Navbar";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+
+export const navItem = [
+  {
+    label: "ၼႃႈႁိူၼ်း",
+    href: "/dashboard",
+    icon: <House className="size-4" />,
+  },
+  {
+    label: "လွင်ႈႁဝ်းၶႃႈ",
+    href: "/about",
+    icon: <Info className="size-4" />,
+  },
+];
 
 interface MobileNavItem {
   open: boolean;
