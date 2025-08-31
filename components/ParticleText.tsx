@@ -68,7 +68,7 @@ export const ParticleText: React.FC<ParticleTextProps> = ({
   return (
     <div ref={containerRef} className={`relative inline-block ${className}`}>
       <div
-        className="text-4xl md:text-7xl font-bold relative z-10 bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent"
+        className="text-4xl md:text-6xl font-bold py-4 relative z-10 bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent"
         style={{
           textShadow: `0 0 20px ${particleColor}10`,
           filter: `drop-shadow(0 0 10px ${particleColor}60)`,

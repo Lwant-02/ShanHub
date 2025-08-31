@@ -1,6 +1,6 @@
 "use client";
 
-import { House, Info, Languages, User } from "lucide-react";
+import { House, Info, User } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -9,25 +9,17 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "./MobileNav";
 import { LoginModal } from "../features/auth/LoginModal";
-
-export const navItem = [
-  {
-    label: "ၼႃႈႁိူၼ်း",
-    href: "/dashboard",
-    icon: <House className="size-4" />,
-  },
-  {
-    label: "လွင်ႈႁဝ်းၶႃႈ",
-    href: "/about",
-    icon: <Info className="size-4" />,
-  },
-];
+import { LocalSwitcher } from "../features/overview/LocalSwitcher";
+import { useTranslations } from "next-intl";
 
 export default function Navbar() {
+  const t = useTranslations("Navbar");
   const pathName = usePathname();
+
   const [isUserScrolled, setIsUserScrolled] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
 
   const handleLogin = () => {
     setIsLoginModalOpen(true);
@@ -60,28 +52,30 @@ export default function Navbar() {
             ShanHub
           </Link>
           <div className="xl:flex hidden justify-center items-center gap-7">
-            {navItem.map((item, index) => (
-              <Link
-                key={index}
-                href={item.href}
-                className={cn(
-                  "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
-                  pathName.endsWith(item.href) && "text-green"
-                )}
-              >
-                {item.icon}
-                <span className="text-base text-center">{item.label}</span>
-              </Link>
-            ))}
-            <button
-              type="button"
+            <Link
+              href="/dashboard"
               className={cn(
-                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300 cursor-pointer"
+                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
+                pathName.endsWith("/dashboard") && "text-green"
               )}
             >
-              <Languages className="size-4" />
-              <span className="text-base text-center">Language</span>
-            </button>
+              <House className="size-4" />
+              <span className="text-base text-center">{t("home")}</span>
+            </Link>
+            <Link
+              href="/about"
+              className={cn(
+                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
+                pathName.endsWith("/about") && "text-green"
+              )}
+            >
+              <Info className="size-4" />
+              <span className="text-base text-center">{t("about")}</span>
+            </Link>
+            <LocalSwitcher
+              onOpenChange={setIsLanguageDropdownOpen}
+              open={isLanguageDropdownOpen}
+            />
             <button
               type="button"
               onClick={handleLogin}
@@ -90,7 +84,7 @@ export default function Navbar() {
               )}
             >
               <User className="size-4" />
-              <span className="text-base text-center">Login</span>
+              <span className="text-base text-center">{t("login")}</span>
             </button>
           </div>
           <div className="xl:hidden flex justify-center items-center">

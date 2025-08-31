@@ -1,0 +1,21 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "language": "Language",
+    "login": "Login"
+  },
+  "Auth": {
+    "title": "Easy Access with Google",
+    "sub_title": "Login to your account with your Google account.",
+    "btn_text": "Continue with Google"
+  },
+  "HomePage": {
+    "Hero": {
+      "first_intro": "Welcome to our community",
+      "main_intro": "Empowering Shan language and learning through technology",
+      "sub_intro": "ShanHub is built to preserve and promote the Shan language and empower education through the power of technology",
+      "btn_text": "Start Exploring"
+    }
+  }
+}

@@ -1,4 +1,5 @@
 "use client";
+
 import { motion, Variants } from "framer-motion";
 import {
   Sparkles,
@@ -14,6 +15,7 @@ import {
 import { NeonBadge } from "@/components/NeonBadge";
 import { ParticleText } from "@/components/ParticleText";
 import ShimmerButton from "@/components/ShimmerButton";
+import { useTranslations } from "next-intl";
 
 export const container: Variants = {
   hidden: { opacity: 0 },
@@ -35,6 +37,7 @@ export const item: Variants = {
 };
 
 export const Hero = () => {
+  const t = useTranslations("HomePage.Hero");
   const stats = [
     { icon: Users, value: "1K+", label: "Monthly Active Users" },
     {
@@ -81,7 +84,7 @@ export const Hero = () => {
           <NeonBadge color="green" className="text-center">
             <span className="flex items-center gap-2">
               <Sparkles className="w-4 h-4" />
-              ယိၼ်းလီႁပ်ႉတွၼ်ႊယူႇၶႃႈ 👋
+              {t("first_intro")} 👋
             </span>
           </NeonBadge>
         </motion.div>
@@ -92,15 +95,13 @@ export const Hero = () => {
           <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-gradient-to-r from-green-400 to-blue-500 rounded-full animate-pulse"></div>
 
           <motion.div variants={item} className="mb-2">
-            <ParticleText text="Discover, learn, and connect with Shan tools in one hub" />
+            <ParticleText text={t("main_intro")} />
           </motion.div>
           <motion.p
             variants={item}
-            className="xl:text-2xl text-xl opacity-85 max-w-4xl mx-auto leading-relaxed mb-8"
+            className="xl:text-2xl text-xl opacity-80 max-w-4xl mx-auto leading-relaxed mb-8 font-medium"
           >
-            The ultimate platform for the Shan community. Connect with your
-            heritage, learn your language, and build the future of Shan digital
-            culture together.
+            {t("sub_intro")}
           </motion.p>
         </div>
 
@@ -109,11 +110,7 @@ export const Hero = () => {
           variants={item}
           className="flex justify-center items-center mb-16"
         >
-          <ShimmerButton
-            text="Start Exploring"
-            color="green"
-            link="/dashboard"
-          />
+          <ShimmerButton text={t("btn_text")} color="green" link="/dashboard" />
         </motion.div>
 
         {/* Stats Grid */}
