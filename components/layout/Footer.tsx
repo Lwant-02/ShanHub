@@ -13,6 +13,7 @@ export const Footer = () => {
     { label: t("dashboard"), href: "/" },
     { label: t("about"), href: "/about" },
     { label: t("donate"), href: "/donate" },
+    { label: t("community"), href: "/community" },
   ];
   const terms_policy = [
     { label: t("terms_of_service"), href: "/terms-of-service" },
@@ -41,19 +42,23 @@ export const Footer = () => {
               <ul className="list-disc list-inside text-gray-400 space-y-2 ml-4">
                 {links.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href}>{link.label}</Link>
+                    <Link href={link.href} className="hover:text-green">
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="text-start">
-              <h3 className="text-3xl py-1 font-bold mb-4 bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+              <h3 className="text-3xl py-1 leading-snug font-bold mb-4 bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
                 {t("terms_and_conditions")}
               </h3>
               <ul className="list-disc list-inside text-gray-400 space-y-2 ml-4">
                 {terms_policy.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href}>{link.label}</Link>
+                    <Link href={link.href} className="hover:text-green">
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>

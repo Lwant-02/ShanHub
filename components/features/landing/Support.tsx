@@ -1,9 +1,9 @@
 "use client";
 import { ArrowRight } from "lucide-react";
 
-import { Button } from "../../ui/button";
 import AnimateOnview from "@/components/AnimateOnview";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export const Support = () => {
   const t = useTranslations("HomePage.Support");
@@ -21,13 +21,13 @@ export const Support = () => {
               {t("content")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                variant="ghost"
-                className="flex cursor-pointer items-center gap-2  p-5 border border-white/20 rounded-2xl hover:bg-white/10 transition-all duration-300 group"
+              <Link
+                href="/donate"
+                className="flex cursor-pointer items-center gap-2  py-2 px-6 border border-white/20 rounded-2xl hover:bg-white/10 transition-all duration-300 group"
               >
                 <p className="text-lg">{t("btn_text")}</p>
                 <ArrowRight className="w-5 h-5 text-red-400 group-hover:scale-110 transition-transform" />
-              </Button>
+              </Link>
             </div>
           </div>
         </div>

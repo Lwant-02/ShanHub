@@ -67,7 +67,7 @@ export const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
             type="button"
             onClick={handleGoogleLogin}
             disabled={!agreedToTerms}
-            className={`flex gap-2 mt-4 cursor-pointer items-center justify-center transition-all duration-300 rounded-2xl p-3 ${
+            className={`flex gap-2 mt-4 cursor-pointer items-center justify-center transition-all duration-300 rounded-xl py-2 ${
               agreedToTerms
                 ? "bg-white/10 hover:bg-white/20"
                 : "bg-gray-600/30 cursor-not-allowed opacity-50"

@@ -8,17 +8,19 @@ import AnimateOnview from "@/components/AnimateOnview";
 
 export const Download = () => {
   const t = useTranslations("HomePage.Download");
-  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [deferredPrompt, setDeferredPrompt] =
+    useState<BeforeInstallPromptEvent | null>(null);
+
   const [isInstallable, setIsInstallable] = useState(false);
 
   useEffect(() => {
     const handler = (e: Event) => {
       e.preventDefault();
-      setDeferredPrompt(e);
+      setDeferredPrompt(e as BeforeInstallPromptEvent);
       setIsInstallable(true);
     };
 
-    window.addEventListener("beforeinstallprompt", handler);
+    window.addEventListener("beforeinstallprompt", handler as EventListener);
 
     return () => window.removeEventListener("beforeinstallprompt", handler);
   }, []);
@@ -36,7 +38,7 @@ export const Download = () => {
   };
 
   return (
-    <section className="py-20 px-4">
+    <section className="py-10 px-4">
       <div className="max-w-6xl mx-auto">
         <AnimateOnview>
           <div className="text-center mb-12">

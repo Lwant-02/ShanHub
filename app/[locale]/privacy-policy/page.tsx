@@ -1,6 +1,6 @@
 import PrivacyPolicyViewPage from "@/components/features/privacy-policy/PrivacyPolicyViewPage";
 
-export const medata = {
+export const metadata = {
   title: "ShanHub | Privacy Policy",
   description: "Privacy Policy for ShanHub",
 };

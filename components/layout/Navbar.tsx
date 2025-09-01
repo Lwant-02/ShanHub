@@ -1,6 +1,6 @@
 "use client";
 
-import { CircleDollarSign, House, Info, User } from "lucide-react";
+import { CircleDollarSign, Handshake, House, Info, User } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -71,6 +71,16 @@ export default function Navbar() {
             >
               <Info className="size-4" />
               <span className="text-base text-center">{t("about")}</span>
+            </Link>
+            <Link
+              href="/community"
+              className={cn(
+                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
+                pathName.endsWith("/community") && "text-green"
+              )}
+            >
+              <Handshake className="size-4" />
+              <span className="text-base text-center">{t("community")}</span>
             </Link>
             <Link
               href="/donate"
