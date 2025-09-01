@@ -3,6 +3,7 @@
     "home": "Dashboard",
     "about": "About",
     "donate": "Donate",
+    "community": "Community",
     "language": "Language",
     "login": "Login"
   },
@@ -79,6 +80,7 @@
       "dashboard": "Dashboard",
       "about": "About",
       "donate": "Donate",
+      "community": "Community",
       "love_text": "Built with ❤️ for the Shan community."
     }
   },
@@ -91,5 +93,125 @@
     "btn_text": "Back to Home",
     "title": "Privacy Policy",
     "last_updated": "Last updated"
+  },
+  "AboutPage": {
+    "btn_text": "Back to Home",
+    "title": "About ShanHub",
+    "subtitle": "Preserving and promoting Shan language and culture through technology",
+    "mission_title": "Our Mission",
+    "mission_content": "ShanHub is dedicated to preserving, promoting, and revitalizing the Shan language and culture through innovative technology solutions. We believe that language is the cornerstone of cultural identity, and our platform serves as a bridge between traditional Shan heritage and modern digital tools.",
+    "vision_title": "Our Vision",
+    "vision_content": "To create a thriving digital ecosystem where the Shan language and culture can flourish, connecting Shan speakers worldwide and ensuring that our rich linguistic heritage is preserved for future generations.",
+    "features_title": "What We Offer",
+    "features": {
+      "learning_tools": "Interactive learning tools and applications for mastering the Shan language",
+      "font_conversion": "Advanced font conversion and text processing utilities",
+      "cultural_content": "Rich cultural content including traditional proverbs, songs, and calendar systems",
+      "community": "A vibrant community platform for Shan language speakers to connect and share",
+      "preservation": "Digital preservation initiatives to safeguard Shan linguistic heritage",
+      "accessibility": "Free and accessible tools for everyone in the Shan community"
+    },
+    "team_title": "Built by the Community",
+    "team_content": "ShanHub is developed by passionate members of the Shan community who understand the importance of preserving our language and culture. Our team combines traditional knowledge with modern technology to create meaningful solutions.",
+    "join_title": "Join Our Mission",
+    "join_content": "Whether you're a native speaker, a learner, or someone interested in Shan culture, you're welcome to join our community and contribute to preserving this beautiful language."
+  },
+  "DonatePage": {
+    "btn_text": "Back to Home",
+    "title": "Support ShanHub",
+    "subtitle": "Help us preserve and promote Shan language and culture",
+    "intro_title": "Why Your Support Matters",
+    "intro_content": "ShanHub is a community-driven platform dedicated to preserving the Shan language and culture. Your support helps us maintain our services, develop new features, and ensure that our tools remain free and accessible to everyone in the Shan community.",
+    "impact_title": "Your Impact",
+    "impact_items": {
+      "development": "Fund the development of new language learning tools and applications",
+      "maintenance": "Keep our servers running and maintain existing applications",
+      "content": "Support the creation of educational content and cultural resources",
+      "community": "Enable community events and cultural preservation initiatives",
+      "accessibility": "Ensure all tools remain free and accessible to everyone"
+    },
+    "ways_title": "Ways to Support",
+    "ways_content": "There are many ways you can support ShanHub and our mission:",
+    "ways_items": {
+      "financial": "Financial contributions to support development and maintenance",
+      "volunteer": "Volunteer your time and skills to help improve our platform",
+      "content": "Contribute cultural content, translations, or educational materials",
+      "community": "Help build and moderate our community spaces",
+      "feedback": "Provide feedback and suggestions to help us improve",
+      "share": "Share ShanHub with others in the Shan community"
+    },
+    "contact_title": "Get Involved",
+    "contact_content": "Ready to support our mission? We'd love to hear from you! Whether you want to make a financial contribution, volunteer your time, or contribute in other ways, every bit of support helps preserve and promote our beautiful Shan language and culture.",
+    "thank_you": "Thank you for supporting the preservation of Shan language and culture!"
+  },
+  "CommunityPage": {
+    "title": "Community Hub",
+    "subtitle": "Connect, share, and learn with the Shan community worldwide",
+    "create_post": "Create Post",
+    "post_placeholder": "Share your thoughts, questions, or experiences with the community...",
+    "post_button": "Share Post",
+    "cancel_button": "Cancel",
+    "login_required": "Please login to create posts and interact with the community",
+    "login_button": "Login to Continue",
+    "no_posts": "No posts yet. Be the first to share something with the community!",
+    "loading": "Loading posts...",
+    "post_success": "Your post has been shared successfully!",
+    "post_error": "Failed to create post. Please try again.",
+    "comment_placeholder": "Write a comment...",
+    "comment_button": "Comment",
+    "like_button": "Like",
+    "reply_button": "Reply",
+    "show_comments": "Show comments",
+    "hide_comments": "Hide comments",
+    "categories": {
+      "all": "All Posts",
+      "discussion": "Discussion",
+      "question": "Questions",
+      "announcement": "Announcements",
+      "culture": "Culture & Heritage",
+      "language": "Language Learning",
+      "apps": "Apps & Tools"
+    },
+    "sort": {
+      "latest": "Latest",
+      "popular": "Most Popular",
+      "trending": "Trending"
+    }
+  },
+  "DashboardPage": {
+    "title": "ShanHub Dashboard",
+    "subtitle": "Explore our collection of Shan language and culture tools",
+    "welcome_back": "Welcome back!",
+    "featured_apps": "Featured Apps",
+    "all_apps": "All Applications",
+    "recently_used": "Recently Used",
+    "categories": {
+      "language_tools": "Language Tools",
+      "converters": "Text Converters",
+      "cultural": "Cultural Content",
+      "utilities": "Utilities"
+    },
+    "app_descriptions": {
+      "LikDai": "Master Shan typing with our interactive tutoring application",
+      "FontConverter": "Convert between different Shan font formats seamlessly",
+      "TaiLeConverter": "Transform Shan script to beautiful Tai Le script",
+      "ShanTranslit": "Convert Shan script to Latin transliteration",
+      "ShanSyllable": "Break down Shan text into syllable components",
+      "TaiLeSyllable": "Analyze Tai Le script syllable structure",
+      "ShanWordSorting": "Sort and organize Shan words by syllable patterns",
+      "ShanProverbs": "Discover traditional Shan wisdom and proverbs",
+      "DokSu": "Explore our collection of traditional Shan songs",
+      "PakPi": "Traditional Shan calendar and cultural dates",
+      "ShanNote": "Take notes in Shan script with advanced features"
+    },
+    "launch_app": "Launch App",
+    "coming_soon": "Coming Soon",
+    "new_badge": "New",
+    "popular_badge": "Popular",
+    "stats": {
+      "total_apps": "Available Apps",
+      "active_users": "Active Users",
+      "downloads": "Total Downloads"
+    }
   }
 }

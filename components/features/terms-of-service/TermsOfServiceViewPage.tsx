@@ -118,7 +118,7 @@ export default function TermsOfServiceViewPage() {
                 6. Limitation of Liability
               </h2>
               <p className="text-gray-300 leading-relaxed">
-                ShanHub is provided "as is" without any warranties. We shall not
+                ShanHub is provided as is without any warranties. We shall not
                 be liable for any damages arising from the use or inability to
                 use our service, including but not limited to direct, indirect,
                 incidental, or consequential damages.
