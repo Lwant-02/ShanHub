@@ -11,11 +11,11 @@ import {
   DollarSign,
   MonitorSmartphone,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { NeonBadge } from "@/components/NeonBadge";
 import { ParticleText } from "@/components/ParticleText";
 import ShimmerButton from "@/components/ShimmerButton";
-import { useTranslations } from "next-intl";
 
 export const container: Variants = {
   hidden: { opacity: 0 },
@@ -38,14 +38,15 @@ export const item: Variants = {
 
 export const Hero = () => {
   const t = useTranslations("HomePage.Hero");
+
   const stats = [
-    { icon: Users, value: "1K+", label: "Monthly Active Users" },
+    { icon: Users, value: "1K+", label: t("users") },
     {
       icon: MonitorSmartphone,
       value: "10 Apps",
-      label: "Offered Apps For Now",
+      label: t("apps"),
     },
-    { icon: DollarSign, value: "Free For All", label: "Free Of Charge To All" },
+    { icon: DollarSign, value: "Free", label: t("free") },
   ];
 
   return (
@@ -140,7 +141,7 @@ export const Hero = () => {
         {/* Scroll Indicator */}
         <motion.div variants={item} className="animate-bounce">
           <ChevronDown className="w-8 h-8 text-gray-400 mx-auto" />
-          <p className="text-gray-500 text-sm">Scroll to explore</p>
+          <p className="text-gray-500 text-sm">{t("scroll")}</p>
         </motion.div>
       </div>
     </motion.section>

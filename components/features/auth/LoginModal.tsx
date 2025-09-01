@@ -1,3 +1,7 @@
+import { useTranslations } from "next-intl";
+import { useState } from "react";
+import Link from "next/link";
+
 import {
   Dialog,
   DialogContent,
@@ -5,7 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { useTranslations } from "next-intl";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const GoogleIcon = () => (
   <svg
@@ -41,6 +45,13 @@ interface LoginModalProps {
 
 export const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
   const t = useTranslations("Auth");
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+
+  const handleGoogleLogin = () => {
+    // Add your Google login logic here
+    console.log("Proceeding with Google login");
+  };
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-black/70 backdrop-blur-sm border border-green/20 rounded-2xl ">
@@ -51,13 +62,55 @@ export const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
           <DialogDescription className="text-xl opacity-90">
             {t("sub_title")}
           </DialogDescription>
+
           <button
             type="button"
-            className="flex gap-2 mt-2 cursor-pointer items-center justify-center bg-white/10 hover:bg-white/20 transition-all duration-300 rounded-2xl p-3"
+            onClick={handleGoogleLogin}
+            disabled={!agreedToTerms}
+            className={`flex gap-2 mt-4 cursor-pointer items-center justify-center transition-all duration-300 rounded-2xl p-3 ${
+              agreedToTerms
+                ? "bg-white/10 hover:bg-white/20"
+                : "bg-gray-600/30 cursor-not-allowed opacity-50"
+            }`}
           >
             <GoogleIcon />
             <span className="text-lg">{t("btn_text")}</span>
           </button>
+
+          {/* Terms of Service and Privacy Policy Agreement */}
+          <div className="flex justify-center items-center space-x-3 mt-4">
+            <Checkbox
+              id="terms-agreement"
+              checked={agreedToTerms}
+              onCheckedChange={(checked) =>
+                setAgreedToTerms(checked as boolean)
+              }
+              className="border border-green/50 bg-green/20 text-green cursor-pointer"
+            />
+            <label
+              htmlFor="terms-agreement"
+              className="text-sm text-gray-300 leading-relaxed cursor-pointer"
+            >
+              {t("terms_agreement")}{" "}
+              <Link
+                href="/terms-of-service"
+                className="text-emerald-400 hover:text-emerald-300 underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("terms_of_service")}
+              </Link>{" "}
+              {t("and")}{" "}
+              <Link
+                href="/privacy-policy"
+                className="text-emerald-400 hover:text-emerald-300 underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("privacy_policy")}
+              </Link>
+            </label>
+          </div>
         </DialogHeader>
       </DialogContent>
     </Dialog>

@@ -1,6 +1,7 @@
 import { Footer } from "@/components/layout/Footer";
 import { Features } from "./Features";
 import { Hero } from "./Hero";
+import { Download } from "./Download";
 import { Support } from "./Support";
 import { Testimonial } from "./Testimonial";
 
@@ -15,6 +16,9 @@ export const LandingViewPage = () => {
 
       {/* Testimonials Section */}
       <Testimonial />
+
+      {/* Download Section */}
+      <Download />
 
       {/* Call to Action Section */}
       <Support />
