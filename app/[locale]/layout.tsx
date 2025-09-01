@@ -2,15 +2,22 @@ import type { Metadata } from "next";
 import { Padauk, Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { getMessages } from "next-intl/server";
 
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { routing } from "@/i18n/routing";
-import { getMessages } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "ShanHub | Welcome to ShanHub",
   description: "ShanHub is a platform for shan apps.",
+  manifest: "/manifest.json",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#2b2e31",
 };
 
 const padauk = Padauk({

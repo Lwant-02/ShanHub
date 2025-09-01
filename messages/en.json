@@ -1,21 +1,95 @@
 {
   "Navbar": {
-    "home": "Home",
+    "home": "Dashboard",
     "about": "About",
+    "donate": "Donate",
     "language": "Language",
     "login": "Login"
   },
   "Auth": {
     "title": "Easy Access with Google",
     "sub_title": "Login to your account with your Google account.",
-    "btn_text": "Continue with Google"
+    "btn_text": "Continue with Google",
+    "terms_agreement": "I agree to the",
+    "terms_of_service": "Terms of Service",
+    "and": "and",
+    "privacy_policy": "Privacy Policy"
   },
   "HomePage": {
     "Hero": {
       "first_intro": "Welcome to our community",
       "main_intro": "Empowering Shan language and learning through technology",
       "sub_intro": "ShanHub is built to preserve and promote the Shan language and empower education through the power of technology",
-      "btn_text": "Start Exploring"
+      "btn_text": "Start Exploring",
+      "users": "Monthly Active Users",
+      "apps": "Offered Apps For Now",
+      "free": "Free Of Charge To All",
+      "scroll": "Scroll to explore"
+    },
+    "Features": {
+      "title": "Our Powerful Features",
+      "content": "Everything you need to learn, create, and connect with the Shan community",
+      "app": {
+        "LikDai": "Shan typing tutoring app",
+        "FontConverter": "Convert Shan fonts to any font",
+        "TaiLeConverter": "Convert Shan script to Tai Le script",
+        "ShanTranslit": "Convert Shan script to Latin script",
+        "ShanSyllable": "Convert Shan script to syllable work break",
+        "TaiLeSyllable": "Convert Tai Le script to syllable work break",
+        "ShanWordSorting": "Sort Shan words by syllable work break",
+        "ShanProverbs": "Learn Shan proverbs and their meanings",
+        "DokSu": "Shan Traditional Songs",
+        "PakPi": "Shan Calandar",
+        "ShanNote": "Shan Note Taking App"
+      }
+    },
+    "Testimonial": {
+      "title": "What Our Community Says",
+      "content": "Hear from our users about their experiences with ShanHub"
+    },
+    "Download": {
+      "title": "Download ShanHub App",
+      "content": "Get the full ShanHub experience on any device. Install our Progressive Web App on your device now.",
+      "mobile_title": "Mobile App",
+      "mobile_content": "Perfect for on-the-go access to ShanHub features",
+      "desktop_title": "Desktop App",
+      "desktop_content": "Full-featured experience for your computer",
+      "install_button": "Install App",
+      "instructions_title": "How to Install",
+      "chrome_title": "Chrome/Edge",
+      "chrome_step1": "Click the install button or look for the install icon in the address bar",
+      "chrome_step2": "Click 'Install' in the popup dialog",
+      "chrome_step3": "The app will be added to your device",
+      "safari_title": "Safari (iOS)/Chrome (Android)",
+      "safari_step1": "Tap the share button at the bottom of the screen",
+      "safari_step2": "Scroll down and tap 'Add to Home Screen'",
+      "safari_step3": "Tap 'Add' to install the app"
+    },
+    "Support": {
+      "title": "Support ShanHub",
+      "content": "ShanHub is build by the community for the community and if you find it useful, please consider supporting us.",
+      "btn_text": "Read More Details"
+    },
+    "Footer": {
+      "content": "Empowering the Shan community through technology. Discover, share, and celebrate our digital culture.",
+      "terms_of_service": "Terms of Service",
+      "quick_links": "Quick Links",
+      "terms_and_conditions": "Terms & Privacy",
+      "privacy_policy": "Privacy Policy",
+      "dashboard": "Dashboard",
+      "about": "About",
+      "donate": "Donate",
+      "love_text": "Built with ❤️ for the Shan community."
     }
+  },
+  "TermsOfService": {
+    "btn_text": "Back to Home",
+    "title": "Terms of Service",
+    "last_updated": "Last updated"
+  },
+  "PrivacyPolicy": {
+    "btn_text": "Back to Home",
+    "title": "Privacy Policy",
+    "last_updated": "Last updated"
   }
 }
