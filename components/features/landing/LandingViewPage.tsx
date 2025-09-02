@@ -1,9 +1,9 @@
 import { Footer } from "@/components/layout/Footer";
-import { Features } from "./Features";
-import { Hero } from "./Hero";
-import { Download } from "./Download";
-import { Support } from "./Support";
-import { Testimonial } from "./Testimonial";
+import { Features } from "./components/Features";
+import { Hero } from "./components/Hero";
+import { Download } from "./components/Download";
+import { Support } from "./components/Support";
+import { Testimonial } from "./components/Testimonial";
 
 export const LandingViewPage = () => {
   return (

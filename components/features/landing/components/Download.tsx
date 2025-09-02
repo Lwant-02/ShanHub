@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { Download as DownloadIcon, Smartphone, Monitor } from "lucide-react";
 
-import { Button } from "../../ui/button";
+import { Button } from "../../../ui/button";
 import AnimateOnview from "@/components/AnimateOnview";
 
 export const Download = () => {

@@ -1,16 +1,16 @@
 "use client";
 
-import { CircleDollarSign, Handshake, House, Info, User } from "lucide-react";
+import { Handshake, HeartPlus, House, Info, User } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 import { cn } from "@/lib/utils";
 import { MobileNav } from "./MobileNav";
 import { LoginModal } from "../features/auth/LoginModal";
 import { LocalSwitcher } from "../features/overview/LocalSwitcher";
-import { useTranslations } from "next-intl";
 
 export default function Navbar() {
   const t = useTranslations("Navbar");
@@ -83,14 +83,14 @@ export default function Navbar() {
               <span className="text-base text-center">{t("community")}</span>
             </Link>
             <Link
-              href="/donate"
+              href="/support"
               className={cn(
                 "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
-                pathName.endsWith("/donate") && "text-green"
+                pathName.endsWith("/support") && "text-green"
               )}
             >
-              <CircleDollarSign className="size-4" />
-              <span className="text-base text-center">{t("donate")}</span>
+              <HeartPlus className="size-4" />
+              <span className="text-base text-center">{t("support")}</span>
             </Link>
             <LocalSwitcher
               onOpenChange={setIsLanguageDropdownOpen}
