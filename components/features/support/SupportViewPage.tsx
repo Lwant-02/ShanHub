@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 
 import { container } from "@/components/features/landing/components/Hero";
 import { Header } from "./components/Header";
-import { MissionAndVision } from "./components/MissionAndVision";
-import { Feature } from "./components/Feature";
-import { Team } from "./components/Team";
-import { JoinSection } from "./components/JoinSection";
+import { Introduction } from "./components/Introduction";
+import { Impact } from "./components/Impact";
+import { WayToSupport } from "./components/WayToSupport";
+import { CTA } from "./components/CTA";
 import { Footer } from "./components/Footer";
 
-export default function AboutViewPage() {
+export default function SupportViewPage() {
   return (
     <div className="min-h-screen py-12">
       <motion.div
@@ -21,17 +21,17 @@ export default function AboutViewPage() {
         {/* Header */}
         <Header />
 
-        {/* Mission and Vision Section */}
-        <MissionAndVision />
+        {/* Introduction */}
+        <Introduction />
 
-        {/* Features Section */}
-        <Feature />
+        {/* Impact Section */}
+        <Impact />
 
-        {/* Team Section */}
-        <Team />
+        {/* Ways to Support */}
+        <WayToSupport />
 
-        {/* Join Section */}
-        <JoinSection />
+        {/* Call to Action */}
+        <CTA />
 
         {/* Footer */}
         <Footer />

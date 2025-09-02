@@ -61,16 +61,6 @@ export const LocalSwitcher = ({ open, onOpenChange }: LocalSwitcherProps) => {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="bg-black/50 min-w-28 backdrop-blur-sm border border-green/20 rounded-2xl">
         <DropdownMenuCheckboxItem
-          checked={shChecked}
-          onCheckedChange={handleShanChange}
-          className={cn(
-            "hover:text-green transition-colors duration-300 cursor-pointer",
-            shChecked && "text-green"
-          )}
-        >
-          <span className="text-base text-center capitalize">Shan</span>
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem
           checked={engChecked}
           onCheckedChange={handleEngChange}
           className={cn(
@@ -79,6 +69,16 @@ export const LocalSwitcher = ({ open, onOpenChange }: LocalSwitcherProps) => {
           )}
         >
           <span className="text-base text-center capitalize">English</span>
+        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem
+          checked={shChecked}
+          onCheckedChange={handleShanChange}
+          className={cn(
+            "hover:text-green transition-colors duration-300 cursor-pointer",
+            shChecked && "text-green"
+          )}
+        >
+          <span className="text-base text-center capitalize">Shan</span>
         </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>

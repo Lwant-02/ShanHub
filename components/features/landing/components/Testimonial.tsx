@@ -3,8 +3,8 @@
 import { useTranslations } from "next-intl";
 
 import { Marquee } from "@/components/Marquee";
-import { TestimonialCard } from "./TestimonialCard";
 import AnimateOnview from "@/components/AnimateOnview";
+import { TestimonialCard } from "./TestimonialCard";
 
 const testimonials = [
   {

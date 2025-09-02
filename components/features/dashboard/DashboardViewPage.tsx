@@ -14,7 +14,6 @@ import {
   Sparkles,
   TrendingUp,
   Users,
-  Download,
   Star,
   Clock,
   Zap,
@@ -25,7 +24,7 @@ import {
   List,
 } from "lucide-react";
 
-import { container, item } from "@/components/features/landing/Hero";
+import { container, item } from "@/components/features/landing/components/Hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -224,7 +223,7 @@ export default function DashboardViewPage() {
           <p className="text-gray-400 text-xl mb-6">{t("subtitle")}</p>
 
           {/* Dashboard Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 xl:p-3 max-w-3xl">
             <div className="bg-white/5 backdrop-blur-sm border border-emerald-500/20 rounded-xl p-4">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-blue-600 rounded-lg flex items-center justify-center">
@@ -244,15 +243,6 @@ export default function DashboardViewPage() {
                 <span className="text-2xl font-bold text-white">2.5K</span>
               </div>
               <p className="text-gray-400 text-sm">{t("stats.active_users")}</p>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
-                  <Download className="w-4 h-4 text-white" />
-                </div>
-                <span className="text-2xl font-bold text-white">15K</span>
-              </div>
-              <p className="text-gray-400 text-sm">{t("stats.downloads")}</p>
             </div>
           </div>
         </motion.div>
@@ -325,7 +315,7 @@ export default function DashboardViewPage() {
               {t("recently_used")}
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 xl:p-3">
             {recentlyUsed.map((app) => (
               <AppCard
                 key={app.id}
@@ -347,7 +337,7 @@ export default function DashboardViewPage() {
               {t("featured_apps")}
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:p-3">
             {featuredApps.map((app) => (
               <AppCard
                 key={app.id}
@@ -387,7 +377,7 @@ export default function DashboardViewPage() {
             <div
               className={`grid gap-4 ${
                 viewMode === "grid"
-                  ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+                  ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:p-3"
                   : "grid-cols-1"
               }`}
             >

@@ -2,7 +2,7 @@
   "Navbar": {
     "home": "Dashboard",
     "about": "About",
-    "donate": "Donate",
+    "support": "Support",
     "community": "Community",
     "language": "Language",
     "login": "Login"
@@ -85,17 +85,14 @@
     }
   },
   "TermsOfService": {
-    "btn_text": "Back to Home",
     "title": "Terms of Service",
     "last_updated": "Last updated"
   },
   "PrivacyPolicy": {
-    "btn_text": "Back to Home",
     "title": "Privacy Policy",
     "last_updated": "Last updated"
   },
   "AboutPage": {
-    "btn_text": "Back to Home",
     "title": "About ShanHub",
     "subtitle": "Preserving and promoting Shan language and culture through technology",
     "mission_title": "Our Mission",
@@ -117,7 +114,6 @@
     "join_content": "Whether you're a native speaker, a learner, or someone interested in Shan culture, you're welcome to join our community and contribute to preserving this beautiful language."
   },
   "DonatePage": {
-    "btn_text": "Back to Home",
     "title": "Support ShanHub",
     "subtitle": "Help us preserve and promote Shan language and culture",
     "intro_title": "Why Your Support Matters",

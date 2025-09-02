@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-import { FeatureCard } from "@/components/features/landing/FeatureCard";
+import { FeatureCard } from "@/components/features/landing/components/FeatureCard";
 import { Marquee } from "@/components/Marquee";
 import AnimateOnview from "@/components/AnimateOnview";
 

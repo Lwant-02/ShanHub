@@ -43,7 +43,7 @@ export const Hero = () => {
     { icon: Users, value: "1K+", label: t("users") },
     {
       icon: MonitorSmartphone,
-      value: "10 Apps",
+      value: "11 Apps",
       label: t("apps"),
     },
     { icon: DollarSign, value: "Free", label: t("free") },
