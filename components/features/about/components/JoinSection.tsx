@@ -18,13 +18,13 @@ export const JoinSection = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <CustomButton
-            text="Join Community"
+            text={t("join_community")}
             icon={<Users className="w-4 h-4 mr-2" />}
             variant="primary"
             link="/community"
           />
           <CustomButton
-            text="Support Us"
+            text={t("contact_us")}
             icon={<HeartPlus className="w-4 h-4 mr-2" />}
             variant="secondary"
             link="/support"

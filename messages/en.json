@@ -58,11 +58,11 @@
       "desktop_content": "Full-featured experience for your computer",
       "install_button": "Install App",
       "instructions_title": "How to Install",
-      "chrome_title": "Chrome/Edge",
+      "chrome_title": "Desktop",
       "chrome_step1": "Click the install button or look for the install icon in the address bar",
       "chrome_step2": "Click 'Install' in the popup dialog",
       "chrome_step3": "The app will be added to your device",
-      "safari_title": "Safari (iOS)/Chrome (Android)",
+      "safari_title": "Mobile",
       "safari_step1": "Tap the share button at the bottom of the screen",
       "safari_step2": "Scroll down and tap 'Add to Home Screen'",
       "safari_step3": "Tap 'Add' to install the app"
@@ -112,9 +112,9 @@
     "team_title": "Built by the Community",
     "team_content": "ShanHub is developed by passionate members of the Shan community who understand the importance of preserving our language and culture. Our team combines traditional knowledge with modern technology to create meaningful solutions.",
     "origin_developer": {
-      "title": "Origin of ShanHub",
+      "title": "Origin of Tools",
       "developer_name": "Sai Mao (TMK).",
-      "content_1": "ShanHub was initiated by",
+      "content_1": "ShanHub tools were initiated by",
       "content_2": "Sai Mao is a Android developer and build a lot of Shan tools for free and open source."
     },
     "next_developer": {
@@ -125,7 +125,9 @@
     },
     "join_title": "Join Our Mission",
     "join_content": "Whether you're a native speaker, a learner, or someone interested in Shan culture, you're welcome to join our community and contribute to preserving this beautiful language.",
-    "footer_text": "Thank you for being part of our journey to preserve and promote the Shan language and culture."
+    "footer_text": "Thank you for being part of our journey to preserve and promote the Shan language and culture.",
+    "join_community": "Join Community",
+    "contact_us": "Contact Us"
   },
   "DonatePage": {
     "title": "Support ShanHub",
@@ -289,6 +291,26 @@
       "support_financial": {
         "question": "How can I support ShanHub financially?",
         "answer": "You can support ShanHub financially by buying us a coffee. Your support helps us maintain our services, develop new features, and ensure that our tools remain free and accessible to everyone in the Shan community."
+      }
+    },
+    "contact": {
+      "title": "Still Have Questions?",
+      "subtitle": "Can't find the answer you're looking for? Join our community or reach out to us directly. We're here to help you make the most of ShanHub.",
+      "join_community": "Join Community",
+      "contact_us": "Contact Us",
+      "contact_form": {
+        "title": "Contact Us Form",
+        "content": "Please fill out the form below to contact us.",
+        "name": "Your Name",
+        "name_placeholder": "Please enter your name.",
+        "name_error": "Name must be at least 2 characters.",
+        "email": "Email Address",
+        "email_placeholder": "Please enter a valid email address.",
+        "email_error": "Invalid email address.",
+        "message": "Your Message or Question",
+        "message_placeholder": "Please enter your message or question.",
+        "message_error": "Message must be at least 10 characters.",
+        "submit": "Submit"
       }
     }
   }

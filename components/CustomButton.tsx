@@ -11,6 +11,7 @@ interface CustomButtonProps {
   link?: string;
   onClick?: () => void;
   disabled?: boolean;
+  type?: "button" | "submit";
 }
 
 const getButtonClassName = ({
@@ -33,12 +34,13 @@ export const CustomButton = ({
   link,
   onClick,
   disabled,
+  type = "button",
 }: CustomButtonProps) => {
   const router = useRouter();
   return (
     <Button
       variant="outline"
-      type="button"
+      type={type}
       disabled={disabled}
       onClick={() => {
         if (link) router.push(link);
