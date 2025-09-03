@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { HeartPlus, Users } from "lucide-react";
 
 import { item } from "../../landing/components/Hero";
+import { CustomButton } from "@/components/CustomButton";
 
 export const JoinSection = () => {
   const t = useTranslations("AboutPage");
@@ -16,18 +17,19 @@ export const JoinSection = () => {
           {t("join_content")}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/community"
-            className="px-6 py-2 flex w-44 justify-center items-center bg-gradient-to-r from-emerald-500 to-blue-600 text-white rounded-lg hover:from-emerald-600 hover:to-blue-700 transition-all duration-300 font-medium"
-          >
-            Join Community
-          </Link>
-          <Link
-            href="/support"
-            className="px-6 py-2 flex w-44 justify-center items-center border border-emerald-500/50 text-emerald-400 rounded-lg hover:bg-emerald-500/10 transition-all duration-300 font-medium"
-          >
-            Support Us
-          </Link>
+          <CustomButton
+            text="Join Community"
+            icon={<Users className="w-4 h-4 mr-2" />}
+            variant="primary"
+            link="/community"
+          />
+          <CustomButton
+            text="Support Us"
+            icon={<HeartPlus className="w-4 h-4 mr-2" />}
+            variant="secondary"
+            link="/support"
+            className="xl:w-40"
+          />
         </div>
       </div>
     </motion.div>

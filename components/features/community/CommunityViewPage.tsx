@@ -28,6 +28,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { PostCard } from "./components/PostCard";
+import { CustomButton } from "@/components/CustomButton";
 
 // Mock data - in a real app, this would come from your backend
 const mockPosts = [
@@ -343,12 +344,11 @@ export default function CommunityViewPage() {
             <Card className="bg-white/5 backdrop-blur-sm border-orange-500/20">
               <CardContent className="p-6 text-center">
                 <p className="text-gray-300 mb-4">{t("login_required")}</p>
-                <Button
-                  onClick={() => setIsLoggedIn(true)} // Mock login
-                  className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700"
-                >
-                  {t("login_button")}
-                </Button>
+                <CustomButton
+                  text={t("login_button")}
+                  variant="primary"
+                  onClick={() => setIsLoggedIn(true)}
+                />
               </CardContent>
             </Card>
           )}
