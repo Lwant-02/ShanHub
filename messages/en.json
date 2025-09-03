@@ -4,6 +4,7 @@
     "about": "About",
     "support": "Support",
     "community": "Community",
+    "faq": "FAQ",
     "language": "Language",
     "login": "Login"
   },
@@ -102,7 +103,7 @@
     "features_title": "What We Offer",
     "features": {
       "learning_tools": "Interactive learning tools and applications for mastering the Shan language",
-      "font_conversion": "Advanced font conversion and text processing utilities",
+      "font_conversion": "Advanced font conversion ",
       "cultural_content": "Rich cultural content including traditional proverbs, songs, and calendar systems",
       "community": "A vibrant community platform for Shan language speakers to connect and share",
       "preservation": "Digital preservation initiatives to safeguard Shan linguistic heritage",
@@ -110,8 +111,21 @@
     },
     "team_title": "Built by the Community",
     "team_content": "ShanHub is developed by passionate members of the Shan community who understand the importance of preserving our language and culture. Our team combines traditional knowledge with modern technology to create meaningful solutions.",
+    "origin_developer": {
+      "title": "Origin of ShanHub",
+      "developer_name": "Sai Mao (TMK).",
+      "content_1": "ShanHub was initiated by",
+      "content_2": "Sai Mao is a Android developer and build a lot of Shan tools for free and open source."
+    },
+    "next_developer": {
+      "title": "Continue Building",
+      "developer_name": "Sai Naw Main (Lwant).",
+      "content_1": "ShanHub is now maintained by me",
+      "content_2": "I am is a full-stack developer and work on ShanHub in my free time and make it accessible to everyone and on every platform."
+    },
     "join_title": "Join Our Mission",
-    "join_content": "Whether you're a native speaker, a learner, or someone interested in Shan culture, you're welcome to join our community and contribute to preserving this beautiful language."
+    "join_content": "Whether you're a native speaker, a learner, or someone interested in Shan culture, you're welcome to join our community and contribute to preserving this beautiful language.",
+    "footer_text": "Thank you for being part of our journey to preserve and promote the Shan language and culture."
   },
   "DonatePage": {
     "title": "Support ShanHub",
@@ -208,6 +222,74 @@
       "total_apps": "Available Apps",
       "active_users": "Active Users",
       "downloads": "Total Downloads"
+    }
+  },
+  "FAQPage": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about ShanHub",
+    "general": {
+      "title": "General Questions",
+      "what_is_shanhub": {
+        "question": "What is ShanHub?",
+        "answer": "ShanHub is a comprehensive platform dedicated to preserving, promoting, and revitalizing the Shan language and culture through innovative technology solutions. We provide a collection of free tools and applications for learning, converting, and working with the Shan language."
+      },
+      "who_can_use": {
+        "question": "Who can use ShanHub?",
+        "answer": "ShanHub is designed for everyone interested in the Shan language and culture - native speakers, learners, researchers, educators, and anyone who wants to explore or preserve this beautiful language. All our tools are free and accessible to everyone."
+      },
+      "is_free": {
+        "question": "Is ShanHub completely free?",
+        "answer": "Yes! ShanHub is completely free to use. We believe that language preservation and cultural tools should be accessible to everyone in the Shan community, regardless of their financial situation."
+      }
+    },
+    "technical": {
+      "title": "Technical Questions",
+      "supported_devices": {
+        "question": "What devices and browsers are supported?",
+        "answer": "ShanHub works on all modern devices including computers, tablets, and smartphones. We support all major browsers like Chrome, Firefox, Safari, and Edge. You can also install ShanHub as a Progressive Web App (PWA) on your device for a native app experience."
+      },
+      "offline_usage": {
+        "question": "Can I use ShanHub offline?",
+        "answer": "Some features of ShanHub work offline once you've installed it as a PWA. However, most tools require an internet connection for full functionality. We're continuously working to improve offline capabilities."
+      },
+      "data_privacy": {
+        "question": "How is my data handled?",
+        "answer": "We take your privacy seriously. ShanHub processes most data locally in your browser when possible. We don't store personal information unless you choose to create an account, and we never share your data with third parties. Please read our Privacy Policy for detailed information."
+      }
+    },
+    "apps": {
+      "title": "Applications & Tools",
+      "available_apps": {
+        "question": "What applications are currently available?",
+        "answer": "ShanHub offers various tools including LikDai (typing tutor), font converters, script converters (Shan to Tai Le, Shan to Latin), syllable analyzers, word sorting tools, traditional proverbs collection, Shan songs (DokSu), traditional calendar (PakPi), and note-taking applications."
+      },
+      "new_features": {
+        "question": "How often are new features added?",
+        "answer": "We continuously work on improving existing tools and adding new features based on community feedback and needs. Major updates are typically released monthly, with smaller improvements and bug fixes released more frequently."
+      },
+      "feature_requests": {
+        "question": "Can I request new features or tools?",
+        "answer": "Absolutely! We encourage community feedback and feature requests. You can reach out through our community platform, social media, or contact us directly. Community-driven development is at the heart of ShanHub."
+      }
+    },
+    "support": {
+      "title": "Support & Community",
+      "get_help": {
+        "question": "How can I get help or support?",
+        "answer": "You can get help through our community platform where users help each other, check this FAQ section, or contact us directly. We also have documentation and tutorials for most of our tools."
+      },
+      "contribute": {
+        "question": "How can I contribute to ShanHub?",
+        "answer": "There are many ways to contribute: provide feedback, report bugs, suggest features, help with translations, contribute cultural content, share ShanHub with others, or support us financially. Every contribution helps preserve and promote the Shan language."
+      },
+      "report_issues": {
+        "question": "How do I report bugs or issues?",
+        "answer": "If you encounter any bugs or issues, please report them through our community platform or contact us directly. Include as much detail as possible about the problem, including what device and browser you're using."
+      },
+      "support_financial": {
+        "question": "How can I support ShanHub financially?",
+        "answer": "You can support ShanHub financially by buying us a coffee. Your support helps us maintain our services, develop new features, and ensure that our tools remain free and accessible to everyone in the Shan community."
+      }
     }
   }
 }

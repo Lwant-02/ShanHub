@@ -1,6 +1,13 @@
 "use client";
 
-import { Handshake, HeartPlus, House, Info, User } from "lucide-react";
+import {
+  Handshake,
+  HeartPlus,
+  House,
+  Info,
+  MessageCircleQuestion,
+  User,
+} from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -9,7 +16,7 @@ import { useTranslations } from "next-intl";
 
 import { cn } from "@/lib/utils";
 import { MobileNav } from "./MobileNav";
-import { LoginModal } from "../features/auth/LoginModal";
+import { LoginDialog } from "../features/auth/LoginDialog";
 import { LocalSwitcher } from "../features/overview/LocalSwitcher";
 
 export default function Navbar() {
@@ -18,11 +25,11 @@ export default function Navbar() {
 
   const [isUserScrolled, setIsUserScrolled] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
 
   const handleLogin = () => {
-    setIsLoginModalOpen(true);
+    setIsLoginDialogOpen(true);
   };
 
   useEffect(() => {
@@ -92,6 +99,16 @@ export default function Navbar() {
               <HeartPlus className="size-4" />
               <span className="text-base text-center">{t("support")}</span>
             </Link>
+            <Link
+              href="/faq"
+              className={cn(
+                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
+                pathName.endsWith("/faq") && "text-green"
+              )}
+            >
+              <MessageCircleQuestion className="size-4" />
+              <span className="text-base text-center">{t("faq")}</span>
+            </Link>
             <LocalSwitcher
               onOpenChange={setIsLanguageDropdownOpen}
               open={isLanguageDropdownOpen}
@@ -117,7 +134,10 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      <LoginModal open={isLoginModalOpen} onOpenChange={setIsLoginModalOpen} />
+      <LoginDialog
+        open={isLoginDialogOpen}
+        onOpenChange={setIsLoginDialogOpen}
+      />
     </>
   );
 }

@@ -10,6 +10,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Checkbox } from "@/components/ui/checkbox";
+import { CustomButton } from "@/components/CustomButton";
 
 const GoogleIcon = () => (
   <svg
@@ -38,12 +39,12 @@ const GoogleIcon = () => (
   </svg>
 );
 
-interface LoginModalProps {
+interface LoginDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
 
-export const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
+export const LoginDialog = ({ open, onOpenChange }: LoginDialogProps) => {
   const t = useTranslations("Auth");
   const [agreedToTerms, setAgreedToTerms] = useState(false);
 
@@ -63,19 +64,14 @@ export const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
             {t("sub_title")}
           </DialogDescription>
 
-          <button
-            type="button"
+          <CustomButton
+            className="mt-2 py-5"
+            text={t("btn_text")}
+            icon={<GoogleIcon />}
+            variant="secondary"
             onClick={handleGoogleLogin}
             disabled={!agreedToTerms}
-            className={`flex gap-2 mt-4 cursor-pointer items-center justify-center transition-all duration-300 rounded-xl py-2 ${
-              agreedToTerms
-                ? "bg-white/10 hover:bg-white/20"
-                : "bg-gray-600/30 cursor-not-allowed opacity-50"
-            }`}
-          >
-            <GoogleIcon />
-            <span className="text-lg">{t("btn_text")}</span>
-          </button>
+          />
 
           {/* Terms of Service and Privacy Policy Agreement */}
           <div className="flex justify-center items-center space-x-3 mt-4">

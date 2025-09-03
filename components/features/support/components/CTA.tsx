@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Coffee, Users } from "lucide-react";
-import Link from "next/link";
 
 import { item } from "../../landing/components/Hero";
-import { Button } from "@/components/ui/button";
+import { CustomButton } from "@/components/CustomButton";
 
 export const CTA = () => {
   const t = useTranslations("DonatePage");
@@ -18,19 +17,17 @@ export const CTA = () => {
           {t("contact_content")}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button className="px-8 py-3 bg-gradient-to-r cursor-pointer from-emerald-500 to-blue-600 text-white rounded-lg hover:from-emerald-600 hover:to-blue-700 transition-all duration-300 font-medium">
-            <Coffee className="w-4 h-4 mr-2" />
-            Buy us a Coffee
-          </Button>
-          <Link href="/community">
-            <Button
-              variant="outline"
-              className="px-8 py-3 border-emerald-500/50 cursor-pointer text-emerald-400 rounded-lg hover:bg-emerald-500/10 transition-all duration-300 font-medium"
-            >
-              <Users className="w-4 h-4 mr-2" />
-              Join Community
-            </Button>
-          </Link>
+          <CustomButton
+            text="Buy us a Coffee"
+            icon={<Coffee className="w-4 h-4 mr-2" />}
+            variant="primary"
+          />
+          <CustomButton
+            text="Join Community"
+            icon={<Users className="w-4 h-4 mr-2" />}
+            variant="secondary"
+            link="/community"
+          />
         </div>
       </div>
     </motion.div>
