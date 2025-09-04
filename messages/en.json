@@ -80,7 +80,8 @@
       "privacy_policy": "Privacy Policy",
       "dashboard": "Dashboard",
       "about": "About",
-      "donate": "Donate",
+      "support": "Support",
+      "faq": "FAQ",
       "community": "Community",
       "love_text": "Built with ❤️ for the Shan community."
     }
@@ -127,7 +128,7 @@
     "join_content": "Whether you're a native speaker, a learner, or someone interested in Shan culture, you're welcome to join our community and contribute to preserving this beautiful language.",
     "footer_text": "Thank you for being part of our journey to preserve and promote the Shan language and culture.",
     "join_community": "Join Community",
-    "contact_us": "Contact Us"
+    "support_us": "Support Us"
   },
   "DonatePage": {
     "title": "Support ShanHub",
@@ -203,27 +204,15 @@
       "cultural": "Cultural Content",
       "utilities": "Utilities"
     },
-    "app_descriptions": {
-      "LikDai": "Master Shan typing with our interactive tutoring application",
-      "FontConverter": "Convert between different Shan font formats seamlessly",
-      "TaiLeConverter": "Transform Shan script to beautiful Tai Le script",
-      "ShanTranslit": "Convert Shan script to Latin transliteration",
-      "ShanSyllable": "Break down Shan text into syllable components",
-      "TaiLeSyllable": "Analyze Tai Le script syllable structure",
-      "ShanWordSorting": "Sort and organize Shan words by syllable patterns",
-      "ShanProverbs": "Discover traditional Shan wisdom and proverbs",
-      "DokSu": "Explore our collection of traditional Shan songs",
-      "PakPi": "Traditional Shan calendar and cultural dates",
-      "ShanNote": "Take notes in Shan script with advanced features"
-    },
     "launch_app": "Launch App",
     "coming_soon": "Coming Soon",
+    "rate_app": "Rate App",
     "new_badge": "New",
     "popular_badge": "Popular",
     "stats": {
       "total_apps": "Available Apps",
       "active_users": "Active Users",
-      "downloads": "Total Downloads"
+      "ratings": "Average Ratings"
     }
   },
   "FAQPage": {
@@ -312,6 +301,37 @@
         "message_error": "Message must be at least 10 characters.",
         "submit": "Submit"
       }
+    }
+  },
+  "RatingPage": {
+    "rate_app": "Rate App",
+    "app_not_found": "App Not Found",
+    "go_back": "Go Back",
+    "back": "Back",
+    "share_experience": "Share Your Experience",
+    "help_improve": "Your feedback helps us improve our apps and services.",
+    "overall_rating": "Overall Rating",
+    "click_stars": "Click on the stars to rate this app",
+    "written_review": "Written Review",
+    "review_placeholder": "Tell us about your experience with this app. What did you like? What could be improved?",
+    "review_description": "Share your thoughts to help other users and developers",
+    "cancel": "Cancel",
+    "submit_rating": "Submit Rating",
+    "submitting": "Submitting...",
+    "thank_you": "Thank You!",
+    "rating_submitted": "Your rating has been submitted successfully.",
+    "back_to_dashboard": "Back to Dashboard",
+    "rate_another_app": "Rate Another App",
+    "privacy_note": "Your review will be used to improve our services and may be displayed publicly.",
+    "rating_required": "Please select a rating",
+    "review_min_length": "Review must be at least 10 characters long",
+    "review_max_length": "Review must be less than 500 characters",
+    "rating_labels": {
+      "terrible": "Terrible",
+      "bad": "Bad",
+      "okay": "Okay",
+      "good": "Good",
+      "excellent": "Excellent"
     }
   }
 }

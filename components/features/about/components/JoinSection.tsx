@@ -24,7 +24,7 @@ export const JoinSection = () => {
             link="/community"
           />
           <CustomButton
-            text={t("contact_us")}
+            text={t("support_us")}
             icon={<HeartPlus className="w-4 h-4 mr-2" />}
             variant="secondary"
             link="/support"
