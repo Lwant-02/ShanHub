@@ -13,3 +13,18 @@ interface App {
   status: string;
   badge: string | null;
 }
+
+interface Post {
+  id: number;
+  author: {
+    name: string;
+    avatar: string;
+    username: string;
+  };
+  content: string;
+  timestamp: Date;
+  likes: number;
+  comments: number;
+  liked: boolean;
+  category: string;
+}

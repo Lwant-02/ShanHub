@@ -13,12 +13,14 @@ const testimonials = [
       "ShanHub has revolutionized how I teach Shan language to my students.",
     contentShan: "ShanHub ယဝ်ႉ လူၵ်ႈပိၼ်ႇ ၸၢၼ်ႈလိၵ်ႈ ၶူး ၸိူဝ်းၸႂ်ႉတိုဝ်း",
     avatar: "",
+    date: "2021-01-01",
   },
   {
     name: "ၼၢင်းၼမ်",
     content: "Learning Shan has never been easier with these amazing tools.",
     contentShan: "ၸၢၼ်ႈလိၵ်ႈ ႁဵၼ်းၸူး ၸိူဝ်းၸႂ်ႉတိုဝ်း လႄႈ ၸႂ်ႉတိုဝ်း",
     avatar: "",
+    date: "2021-01-01",
   },
   {
     name: "ၸၢၼ်ႈၶမ်း",
@@ -27,6 +29,7 @@ const testimonials = [
     contentShan:
       "ShanHub ယဝ်ႉ API လႄႈ ၸိူဝ်းၸႂ်ႉတိုဝ်း ၸၢၼ်ႈအႅပ်ႇ ၸိူဝ်းၸႂ်ႉတိုဝ်း",
     avatar: "",
+    date: "2021-01-01",
   },
   {
     name: "ၸၢၼ်ႈမၢင်း",
@@ -34,32 +37,35 @@ const testimonials = [
       "ShanHub has revolutionized how I teach Shan language to my students.",
     contentShan: "ShanHub ယဝ်ႉ လူၵ်ႈပိၼ်ႇ ၸၢၼ်ႈလိၵ်ႈ ၶူး ၸိူဝ်းၸႂ်ႉတိုဝ်း",
     avatar: "",
+    date: "2021-01-01",
   },
   {
     name: "ၼၢင်းၼမ်",
     content: "Learning Shan has never been easier with these amazing tools.",
     contentShan: "ၸၢၼ်ႈလိၵ်ႈ ႁဵၼ်းၸူး ၸိူဝ်းၸႂ်ႉတိုဝ်း လႄႈ ၸႂ်ႉတိုဝ်း",
     avatar: "",
-  },
-  {
-    name: "ၼၢင်းၼမ်",
-
-    content: "Learning Shan has never been easier with these amazing tools.",
-    contentShan: "ၸၢၼ်ႈလိၵ်ႈ ႁဵၼ်းၸူး ၸိူဝ်းၸႂ်ႉတိုဝ်း လႄႈ ၸႂ်ႉတိုဝ်း",
-    avatar: "",
-  },
-  {
-    name: "ၼၢင်းၼမ်",
-
-    content: "Learning Shan has never been easier with these amazing tools.",
-    contentShan: "ၸၢၼ်ႈလိၵ်ႈ ႁဵၼ်းၸူး ၸိူဝ်းၸႂ်ႉတိုဝ်း လႄႈ ၸႂ်ႉတိုဝ်း",
-    avatar: "",
+    date: "2021-01-01",
   },
   {
     name: "ၼၢင်းၼမ်",
     content: "Learning Shan has never been easier with these amazing tools.",
     contentShan: "ၸၢၼ်ႈလိၵ်ႈ ႁဵၼ်းၸူး ၸိူဝ်းၸႂ်ႉတိုဝ်း လႄႈ ၸႂ်ႉတိုဝ်း",
     avatar: "",
+    date: "2021-01-01",
+  },
+  {
+    name: "ၼၢင်းၼမ်",
+    content: "Learning Shan has never been easier with these amazing tools.",
+    contentShan: "ၸၢၼ်ႈလိၵ်ႈ ႁဵၼ်းၸူး ၸိူဝ်းၸႂ်ႉတိုဝ်း လႄႈ ၸႂ်ႉတိုဝ်း",
+    avatar: "",
+    date: "2021-01-01",
+  },
+  {
+    name: "ၼၢင်းၼမ်",
+    content: "Learning Shan has never been easier with these amazing tools.",
+    contentShan: "ၸၢၼ်ႈလိၵ်ႈ ႁဵၼ်းၸူး ၸိူဝ်းၸႂ်ႉတိုဝ်း လႄႈ ၸႂ်ႉတိုဝ်း",
+    avatar: "",
+    date: "2021-01-01",
   },
 ];
 

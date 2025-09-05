@@ -160,36 +160,28 @@
   "CommunityPage": {
     "title": "Community Hub",
     "subtitle": "Connect, share, and learn with the Shan community worldwide",
-    "create_post": "Create Post",
-    "post_placeholder": "Share your thoughts, questions, or experiences with the community...",
-    "post_button": "Share Post",
-    "cancel_button": "Cancel",
+    "active_members": "Active Members",
+    "total_posts": "Total Posts",
+    "sort": {
+      "latest": "Latest",
+      "popular": "Most Popular"
+    },
+    "create_post_button": "Create Post",
+    "form": {
+      "title": "Create a New Post",
+      "content": "Post your thoughts, questions, or experiences with the community.",
+      "post_placeholder": "Share your thoughts, questions, or experiences with the community...",
+      "post_error": "Content must be at least 10 characters.",
+      "post_button": "Share Post",
+      "cancel_button": "Cancel"
+    },
     "login_required": "Please login to create posts and interact with the community",
-    "login_button": "Login to Continue",
+    "login_button": "Login",
     "no_posts": "No posts yet. Be the first to share something with the community!",
-    "loading": "Loading posts...",
     "post_success": "Your post has been shared successfully!",
     "post_error": "Failed to create post. Please try again.",
     "comment_placeholder": "Write a comment...",
-    "comment_button": "Comment",
-    "like_button": "Like",
-    "reply_button": "Reply",
-    "show_comments": "Show comments",
-    "hide_comments": "Hide comments",
-    "categories": {
-      "all": "All Posts",
-      "discussion": "Discussion",
-      "question": "Questions",
-      "announcement": "Announcements",
-      "culture": "Culture & Heritage",
-      "language": "Language Learning",
-      "apps": "Apps & Tools"
-    },
-    "sort": {
-      "latest": "Latest",
-      "popular": "Most Popular",
-      "trending": "Trending"
-    }
+    "comment_button": "Comment"
   },
   "DashboardPage": {
     "title": "ShanHub Dashboard",
@@ -239,9 +231,9 @@
         "question": "What devices and browsers are supported?",
         "answer": "ShanHub works on all modern devices including computers, tablets, and smartphones. We support all major browsers like Chrome, Firefox, Safari, and Edge. You can also install ShanHub as a Progressive Web App (PWA) on your device for a native app experience."
       },
-      "offline_usage": {
-        "question": "Can I use ShanHub offline?",
-        "answer": "Some features of ShanHub work offline once you've installed it as a PWA. However, most tools require an internet connection for full functionality. We're continuously working to improve offline capabilities."
+      "why_login_required": {
+        "question": "Why do I need to login?",
+        "answer": "Login is required to access certain features, participate in the community, and contribute to our platform. It also helps us understand our user base and improve our services."
       },
       "data_privacy": {
         "question": "How is my data handled?",

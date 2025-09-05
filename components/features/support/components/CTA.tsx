@@ -4,8 +4,11 @@ import { Coffee, Users } from "lucide-react";
 
 import { item } from "../../landing/components/Hero";
 import { CustomButton } from "@/components/CustomButton";
+import { useState } from "react";
+import { SupportDialog } from "./SupportDialog";
 
 export const CTA = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const t = useTranslations("DonatePage");
   return (
     <motion.div variants={item} className="mb-12">
@@ -18,6 +21,7 @@ export const CTA = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <CustomButton
+            onClick={() => setIsDialogOpen(true)}
             text="Buy us a Coffee"
             icon={<Coffee className="w-4 h-4 mr-2" />}
             variant="primary"
@@ -30,6 +34,7 @@ export const CTA = () => {
           />
         </div>
       </div>
+      <SupportDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
     </motion.div>
   );
 };

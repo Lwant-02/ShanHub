@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { formatDate } from "@/lib/utils";
 import { Star } from "lucide-react";
 
 interface TestimonialCardProps {
@@ -6,6 +7,7 @@ interface TestimonialCardProps {
     name: string;
     content: string;
     avatar: string;
+    date: string;
   };
   index: number;
 }
@@ -19,13 +21,19 @@ export const TestimonialCard = ({
       style={{ animationDelay: `${index * 200}ms` }}
     >
       <div className="flex items-center mb-4 gap-2">
-        <Avatar>
+        <Avatar className="size-10">
           <AvatarImage
             src={testimonial.avatar || "https://github.com/shadcn.png"}
+            className="object-cover size-fit"
           />
           <AvatarFallback>{testimonial.name}</AvatarFallback>
         </Avatar>
-        <h4 className="font-bold text-white">{testimonial.name}</h4>
+        <div className="flex flex-col">
+          <h4 className="font-bold text-white">{testimonial.name}</h4>
+          <h3 className="text-sm text-white/80">
+            {formatDate(testimonial.date)}
+          </h3>
+        </div>
       </div>
       <p className="text-gray-300 mb-3 leading-relaxed">
         {testimonial.content}

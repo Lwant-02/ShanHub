@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Plus } from "lucide-react";
+import { ArrowLeft, Plus, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import { StarRating } from "@/components/ui/star-rating";
@@ -25,6 +25,14 @@ export const Header = ({
   setShowRatingForm,
 }: HeaderProps) => {
   const router = useRouter();
+
+  const handleCancel = () => {
+    setShowRatingForm(false);
+  };
+  const handleRate = () => {
+    setShowRatingForm(true);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -20 }}
@@ -40,8 +48,8 @@ export const Header = ({
         Back to Dashboard
       </button>
 
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-4">
+      <div className="flex xl:flex-row flex-col items-center justify-between mb-6 gap-3">
+        <div className="flex items-center justify-start w-full gap-4">
           <div
             className={`w-16 h-16 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center`}
           >
@@ -58,15 +66,21 @@ export const Header = ({
             </div>
           </div>
         </div>
-
-        {!showRatingForm && (
+        <div className="flex items-center justify-end w-full">
           <CustomButton
-            text="Give Rating"
-            icon={<Plus className="w-4 h-4 mr-2" />}
+            text={showRatingForm ? "Close" : "Give Rating"}
+            icon={
+              showRatingForm ? (
+                <X className="w-4 h-4 mr-2" />
+              ) : (
+                <Plus className="w-4 h-4 mr-2" />
+              )
+            }
             variant="primary"
-            onClick={() => setShowRatingForm(true)}
+            onClick={showRatingForm ? handleCancel : handleRate}
+            className="w-40"
           />
-        )}
+        </div>
       </div>
     </motion.div>
   );
