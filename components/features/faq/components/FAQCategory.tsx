@@ -33,7 +33,7 @@ export const FAQCategory = () => {
       icon: Settings,
       color: "text-orange",
       bgColor: "bg-orange/10",
-      questions: ["supported_devices", "offline_usage", "data_privacy"],
+      questions: ["supported_devices", "why_login_required", "data_privacy"],
     },
     {
       key: "apps",
