@@ -88,11 +88,98 @@
   },
   "TermsOfService": {
     "title": "Terms of Service",
-    "last_updated": "Last updated"
+    "last_updated": "Last updated",
+    "acceptance_of_terms": {
+      "title": "Acceptance of Terms",
+      "content": "By accessing and using ShanHub, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service."
+    },
+    "description_of_service": {
+      "title": "Description of Service",
+      "content": "ShanHub is a platform dedicated to preserving and promoting the Shan language and culture through technology. Our services include:",
+      "services": [
+        "Shan language learning tools and applications",
+        "Font conversion and text processing utilities",
+        "Cultural content including proverbs, songs, and calendar",
+        "Community features for Shan language speakers"
+      ]
+    },
+    "user_responsibilities": {
+      "title": "User Responsibilities",
+      "content": "As a user of ShanHub, you agree to:",
+      "responsibilities": [
+        "Use the service for lawful purposes only",
+        "Respect the intellectual property rights of others",
+        "Not attempt to harm or disrupt the service",
+        "Provide accurate information when required",
+        "Respect other users and maintain a positive community environment"
+      ]
+    },
+    "privacy_and_data": {
+      "title": "လွင်ႈသုၼ်ႇတူဝ်လႄႈၶေႃႈမုၼ်း",
+      "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information. By using our service, you consent to the collection and use of information in accordance with our Privacy Policy."
+    },
+    "contact_information": {
+      "title": "Contact Information",
+      "content": "If you have any questions about these Terms of Service, please contact us through our official channels or community forums."
+    },
+    "footer": {
+      "content": "Thank you for being part of the ShanHub community and helping preserve the Shan language and culture."
+    }
   },
   "PrivacyPolicy": {
     "title": "Privacy Policy",
-    "last_updated": "Last updated"
+    "last_updated": "Last updated",
+    "information_we_collect": {
+      "title": "Information We Collect",
+      "personal_information": {
+        "title": "Personal Information",
+        "content": "When you use Google authentication, we collect basic profile information including your name, email address, and profile picture as provided by Google."
+      },
+      "usage_data": {
+        "title": "Usage Data",
+        "content": "We collect information about how you interact with our applications, including features used, time spent, and general usage patterns to improve our services."
+      }
+    },
+    "how_we_use_your_information": {
+      "title": "How We Use Your Information",
+      "content": "We use the collected information for the following purposes:",
+      "purposes": [
+        "To provide and maintain our services",
+        "To authenticate and secure your account",
+        "To improve and optimize our applications",
+        "To communicate important updates or changes",
+        "To provide customer support when needed"
+      ]
+    },
+    "information_sharing": {
+      "title": "Information Sharing",
+      "content": "We do not sell, trade, or rent your personal information to third parties. We may share information only in the following circumstances:",
+      "circumstances": [
+        "With your explicit consent",
+        "To comply with legal obligations",
+        "To protect our rights and prevent fraud"
+      ]
+    },
+    "security": {
+      "title": "Data Security",
+      "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security."
+    },
+    "your_rights": {
+      "title": "Your Rights",
+      "content": "You have the right to access, correct, or delete your personal information:",
+      "rights": [
+        "Access and review your personal data",
+        "Request correction of inaccurate information",
+        "Request deletion of your account and data"
+      ]
+    },
+    "contact_us": {
+      "title": "Contact Us",
+      "content": "If you have any questions about this Privacy Policy or our data practices, please contact us through our official channels or community forums."
+    },
+    "footer": {
+      "content": "Thank you for being part of the ShanHub community and helping preserve the Shan language and culture."
+    }
   },
   "AboutPage": {
     "title": "About ShanHub",
@@ -130,7 +217,7 @@
     "join_community": "Join Community",
     "support_us": "Support Us"
   },
-  "DonatePage": {
+  "SupportPage": {
     "title": "Support ShanHub",
     "subtitle": "Help us preserve and promote Shan language and culture",
     "intro_title": "Why Your Support Matters",
@@ -138,10 +225,8 @@
     "impact_title": "Your Impact",
     "impact_items": {
       "development": "Fund the development of new language learning tools and applications",
-      "maintenance": "Keep our servers running and maintain existing applications",
       "content": "Support the creation of educational content and cultural resources",
-      "community": "Enable community events and cultural preservation initiatives",
-      "accessibility": "Ensure all tools remain free and accessible to everyone"
+      "community": "Enable community events and cultural preservation initiatives"
     },
     "ways_title": "Ways to Support",
     "ways_content": "There are many ways you can support ShanHub and our mission:",
@@ -155,7 +240,15 @@
     },
     "contact_title": "Get Involved",
     "contact_content": "Ready to support our mission? We'd love to hear from you! Whether you want to make a financial contribution, volunteer your time, or contribute in other ways, every bit of support helps preserve and promote our beautiful Shan language and culture.",
-    "thank_you": "Thank you for supporting the preservation of Shan language and culture!"
+    "thank_you": "Thank you for supporting the preservation of Shan language and culture!",
+    "buy_coffee": "Buy Us a Coffee",
+    "join_community": "Join Community",
+    "support_dialog": {
+      "title": "Thank you for your support",
+      "content": "Help sustain ShanHub and connect with the maintainers.",
+      "maintainer": "Maintainers",
+      "btn": "Close"
+    }
   },
   "CommunityPage": {
     "title": "Community Hub",
@@ -186,16 +279,8 @@
   "DashboardPage": {
     "title": "ShanHub Dashboard",
     "subtitle": "Explore our collection of Shan language and culture tools",
-    "welcome_back": "Welcome back!",
-    "featured_apps": "Featured Apps",
     "all_apps": "All Applications",
     "recently_used": "Recently Used",
-    "categories": {
-      "language_tools": "Language Tools",
-      "converters": "Text Converters",
-      "cultural": "Cultural Content",
-      "utilities": "Utilities"
-    },
     "launch_app": "Launch App",
     "coming_soon": "Coming Soon",
     "rate_app": "Rate App",
@@ -297,10 +382,11 @@
     }
   },
   "RatingPage": {
-    "rate_app": "Rate App",
     "app_not_found": "App Not Found",
-    "go_back": "Go Back",
-    "back": "Back",
+    "go_back": "Back to Dashboard",
+    "rating_btn": "Give Rating",
+    "rating": "rating",
+    "close_btn": "Close",
     "share_experience": "Share Your Experience",
     "help_improve": "Your feedback helps us improve our apps and services.",
     "overall_rating": "Overall Rating",
@@ -308,13 +394,10 @@
     "written_review": "Written Review",
     "review_placeholder": "Tell us about your experience with this app. What did you like? What could be improved?",
     "review_description": "Share your thoughts to help other users and developers",
-    "cancel": "Cancel",
+    "cancel_btn": "Cancel",
     "submit_rating": "Submit Rating",
-    "submitting": "Submitting...",
     "thank_you": "Thank You!",
     "rating_submitted": "Your rating has been submitted successfully.",
-    "back_to_dashboard": "Back to Dashboard",
-    "rate_another_app": "Rate Another App",
     "privacy_note": "Your review will be used to improve our services and may be displayed publicly.",
     "rating_required": "Please select a rating",
     "review_min_length": "Review must be at least 10 characters long",

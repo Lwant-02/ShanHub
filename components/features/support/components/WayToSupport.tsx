@@ -12,7 +12,7 @@ import {
 import { item } from "../../landing/components/Hero";
 
 export const WayToSupport = () => {
-  const t = useTranslations("DonatePage");
+  const t = useTranslations("SupportPage");
   const supportWays = [
     {
       icon: DollarSign,

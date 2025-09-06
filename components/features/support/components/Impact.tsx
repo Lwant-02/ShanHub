@@ -6,17 +6,12 @@ import { Code, Server, BookOpen, Users, Heart } from "lucide-react";
 import { item } from "../../landing/components/Hero";
 
 export const Impact = () => {
-  const t = useTranslations("DonatePage");
+  const t = useTranslations("SupportPage");
   const impactItems = [
     {
       icon: Code,
       title: t("impact_items.development"),
       gradient: "from-blue-500 to-purple-600",
-    },
-    {
-      icon: Server,
-      title: t("impact_items.maintenance"),
-      gradient: "from-emerald-500 to-teal-600",
     },
     {
       icon: BookOpen,
@@ -27,11 +22,6 @@ export const Impact = () => {
       icon: Users,
       title: t("impact_items.community"),
       gradient: "from-pink-500 to-rose-600",
-    },
-    {
-      icon: Heart,
-      title: t("impact_items.accessibility"),
-      gradient: "from-indigo-500 to-blue-600",
     },
   ];
   return (

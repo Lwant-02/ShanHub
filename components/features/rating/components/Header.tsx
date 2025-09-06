@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, Plus, X } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 import { StarRating } from "@/components/ui/star-rating";
 import { CustomButton } from "@/components/CustomButton";
@@ -24,6 +25,7 @@ export const Header = ({
   showRatingForm,
   setShowRatingForm,
 }: HeaderProps) => {
+  const t = useTranslations("RatingPage");
   const router = useRouter();
 
   const handleCancel = () => {
@@ -45,7 +47,7 @@ export const Header = ({
         className="text-green/80 hover:text-green cursor-pointer mb-4 text-base flex gap-2 justify-center items-center"
       >
         <ArrowLeft className="size-5" />
-        Back to Dashboard
+        {t("go_back")}
       </button>
 
       <div className="flex xl:flex-row flex-col items-center justify-between mb-6 gap-3">
@@ -62,13 +64,15 @@ export const Header = ({
               <span className="text-yellow-400 font-semibold">
                 {averageRating.toFixed(1)}
               </span>
-              <span className="text-gray-400">({mockRatings} rating)</span>
+              <span className="text-gray-400">
+                ({mockRatings} {t("rating")})
+              </span>
             </div>
           </div>
         </div>
         <div className="flex items-center justify-end w-full">
           <CustomButton
-            text={showRatingForm ? "Close" : "Give Rating"}
+            text={showRatingForm ? t("close_btn") : t("rating_btn")}
             icon={
               showRatingForm ? (
                 <X className="w-4 h-4 mr-2" />

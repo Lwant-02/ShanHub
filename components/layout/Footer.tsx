@@ -12,8 +12,8 @@ export const Footer = () => {
   const links = [
     { label: t("dashboard"), href: "/" },
     { label: t("about"), href: "/about" },
-    { label: t("support"), href: "/support" },
     { label: t("community"), href: "/community" },
+    { label: t("support"), href: "/support" },
     { label: t("faq"), href: "/faq" },
   ];
   const terms_policy = [
@@ -57,7 +57,12 @@ export const Footer = () => {
               <ul className="list-disc list-inside text-gray-400 space-y-2 ml-4">
                 {terms_policy.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href} className="hover:text-green">
+                    <Link
+                      href={link.href}
+                      className="hover:text-green"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {link.label}
                     </Link>
                   </li>
