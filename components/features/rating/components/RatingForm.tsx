@@ -156,7 +156,7 @@ export const RatingForm = ({
               {/* Submit Button */}
               <div className="grid xl:grid-cols-2 grid-cols-1 gap-4 pt-4">
                 <CustomButton
-                  text={t("cancel")}
+                  text={t("cancel_btn")}
                   variant="secondary"
                   onClick={resetForm}
                 />

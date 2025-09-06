@@ -9,7 +9,7 @@ import { SupportDialog } from "./SupportDialog";
 
 export const CTA = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const t = useTranslations("DonatePage");
+  const t = useTranslations("SupportPage");
   return (
     <motion.div variants={item} className="mb-12">
       <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 backdrop-blur-sm border border-emerald-500/30 rounded-2xl p-8 text-center">
@@ -22,12 +22,12 @@ export const CTA = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <CustomButton
             onClick={() => setIsDialogOpen(true)}
-            text="Buy us a Coffee"
+            text={t("buy_coffee")}
             icon={<Coffee className="w-4 h-4 mr-2" />}
             variant="primary"
           />
           <CustomButton
-            text="Join Community"
+            text={t("join_community")}
             icon={<Users className="w-4 h-4 mr-2" />}
             variant="secondary"
             link="/community"

@@ -34,7 +34,7 @@ export const ThanyouDialog = ({ open, onOpenChange }: ThanyouDialogProps) => {
         </DialogDescription>
         <div className="space-y-3">
           <CustomButton
-            text="Close"
+            text={t("close_btn")}
             className="w-32"
             variant="secondary"
             onClick={() => onOpenChange(false)}

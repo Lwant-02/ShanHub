@@ -11,12 +11,14 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { developers_contacts } from "@/constant/constant";
+import { useTranslations } from "next-intl";
 
 interface SupportDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
 export const SupportDialog = ({ open, onOpenChange }: SupportDialogProps) => {
+  const t = useTranslations("SupportPage.support_dialog");
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-black/70 backdrop-blur-sm border border-green/20 rounded-2xl flex justify-center items-center flex-col p-6">
@@ -31,16 +33,16 @@ export const SupportDialog = ({ open, onOpenChange }: SupportDialogProps) => {
               <Coffee className="size-6 text-emerald-400" />
             </div>
             <DialogTitle className="text-2xl font-bold text-white">
-              Thank you for your support!
+              {t("title")}
             </DialogTitle>
             <DialogDescription className="text-gray-300 text-base">
-              Help sustain ShanHub and connect with the maintainers.
+              {t("content")}
             </DialogDescription>
           </div>
 
           <div className="w-full">
             <h3 className="text-lg font-semibold text-white mb-2">
-              Maintainers
+              {t("maintainer")}
             </h3>
             <div className="space-y-2">
               {developers_contacts.map((contact) => (
@@ -70,7 +72,7 @@ export const SupportDialog = ({ open, onOpenChange }: SupportDialogProps) => {
 
           <div className="mt-6 w-full">
             <CustomButton
-              text="Close"
+              text={t("btn")}
               className="w-full"
               variant="secondary"
               onClick={() => onOpenChange(false)}

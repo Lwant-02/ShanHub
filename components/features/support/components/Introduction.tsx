@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { item } from "../../landing/components/Hero";
 
 export const Introduction = () => {
-  const t = useTranslations("DonatePage");
+  const t = useTranslations("SupportPage");
   return (
     <motion.div variants={item} className="mb-12">
       <div className="bg-white/5 backdrop-blur-sm border border-emerald-500/20 rounded-2xl p-8">

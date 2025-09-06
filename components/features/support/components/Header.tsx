@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { item } from "../../landing/components/Hero";
 
 export const Header = () => {
-  const t = useTranslations("DonatePage");
+  const t = useTranslations("SupportPage");
   return (
     <motion.div variants={item} className="mb-8">
       <h1 className="text-4xl py-2 font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent mb-4">
