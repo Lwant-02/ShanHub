@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Padauk } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -20,12 +19,6 @@ export const viewport = {
   themeColor: "#2b2e31",
 };
 
-const padauk = Padauk({
-  variable: "--font-padauk",
-  subsets: ["myanmar"],
-  weight: ["400"],
-});
-
 type RootLayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -43,10 +36,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body
-        className={`${padauk.variable}  antialiased`}
-        suppressHydrationWarning={true}
-      >
+      <body className={` antialiased`} suppressHydrationWarning={true}>
         <div className="min-h-screen w-full bg-[#020617] relative">
           <div
             className="absolute inset-0 z-0"

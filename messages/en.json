@@ -259,7 +259,7 @@
       "title": "Support & Community",
       "get_help": {
         "question": "How can I get help or support?",
-        "answer": "You can get help through our community platform where users help each other, check this FAQ section, or contact us directly. We also have documentation and tutorials for most of our tools."
+        "answer": "You can get help through our community platform where users help each other, check this FAQ section, or contact us directly."
       },
       "contribute": {
         "question": "How can I contribute to ShanHub?",
@@ -271,7 +271,8 @@
       },
       "support_financial": {
         "question": "How can I support ShanHub financially?",
-        "answer": "You can support ShanHub financially by buying us a coffee. Your support helps us maintain our services, develop new features, and ensure that our tools remain free and accessible to everyone in the Shan community."
+        "answer": "You can support ShanHub financially by buying us a coffee. Your support helps us maintain our services, develop new features, and ensure that our tools remain free and accessible to everyone in the Shan community.",
+        "btn_text": "Buy Us a Coffee"
       }
     },
     "contact": {

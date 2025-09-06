@@ -86,7 +86,7 @@ export const FAQCategory = () => {
                     value={`${category.key}-${questionKey}`}
                     className="border border-gray-800/30 rounded-xl bg-gray-800/20 hover:bg-gray-800/40 transition-colors duration-200"
                   >
-                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline cursor-pointer">
                       <span className="text-lg font-medium text-white pr-4">
                         {t(`${category.key}.${questionKey}.question`)}
                       </span>
@@ -97,11 +97,11 @@ export const FAQCategory = () => {
                       </div>
                       {questionKey === "support_financial" && (
                         <CustomButton
-                          text="Click Here"
+                          text={t(`${category.key}.${questionKey}.btn_text`)}
                           icon={<Coffee className="w-4 h-4 mr-2" />}
                           variant="primary"
                           link="/support"
-                          className="w-32"
+                          className="w-40"
                         />
                       )}
                     </AccordionContent>
