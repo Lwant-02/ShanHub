@@ -1,15 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Myanmar:wght@100;200;300;400;500;600;700;800;900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: "ShanWanhai";
+  src: url("/fonts/ShanWanhai.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
 
 @theme inline {
   --color-primary: var(--primary);
   --color-orange: var(--orange);
   --color-green: var(--green);
   --color-forceground: var(--forceground);
-  --font-primary: var(--font-padauk);
+  --font-primary: var(--font-primary);
 }
 
 :root {
@@ -17,7 +23,7 @@
   --orange: #fe7743;
   --green: #67c090;
   --forceground: #222831;
-  --font-primary: "Padauk", sans-serif;
+  --font-primary: "ShanWanhai", sans-serif;
 }
 
 @layer base {

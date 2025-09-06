@@ -59,7 +59,7 @@ export const FAQDialog = ({ open, onOpenChange }: FAQDialogProps) => {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-black/70 backdrop-blur-sm border border-green/20 rounded-2xl ">
         <DialogHeader>
-          <DialogTitle className="text-2xl bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+          <DialogTitle className="text-2xl py-2 bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
             {t("title")}
           </DialogTitle>
           <DialogDescription className="text-xl opacity-90">
