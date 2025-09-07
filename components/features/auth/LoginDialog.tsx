@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/dialog";
 import { Checkbox } from "@/components/ui/checkbox";
 import { CustomButton } from "@/components/CustomButton";
+import { signIn } from "@/lib/auth-client";
 
 const GoogleIcon = () => (
   <svg
@@ -49,9 +50,12 @@ export const LoginDialog = ({ open, onOpenChange }: LoginDialogProps) => {
   const t = useTranslations("Auth");
   const [agreedToTerms, setAgreedToTerms] = useState(false);
 
-  const handleGoogleLogin = () => {
-    // Add your Google login logic here
-    console.log("Proceeding with Google login");
+  const handleGoogleLogin = async () => {
+    await signIn.social({
+      provider: "google",
+      callbackURL: "/dashboard",
+      disableRedirect: true,
+    });
   };
 
   return (
