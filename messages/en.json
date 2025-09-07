@@ -274,7 +274,9 @@
     "post_success": "Your post has been shared successfully!",
     "post_error": "Failed to create post. Please try again.",
     "comment_placeholder": "Write a comment...",
-    "comment_button": "Comment"
+    "comment_button": "Comment",
+    "comment_error": "Comment must be at least 2 characters.",
+    "reply_button": "Reply"
   },
   "DashboardPage": {
     "title": "ShanHub Dashboard",
