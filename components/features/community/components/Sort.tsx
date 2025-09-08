@@ -11,7 +11,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { item } from "../../landing/components/Hero";
 import { CustomButton } from "@/components/CustomButton";
-import { useState } from "react";
+import { useSession } from "@/lib/auth-client";
+import { useAuthStore } from "@/store/auth.store";
 
 interface SortProps {
   sortBy: string;
@@ -19,19 +20,23 @@ interface SortProps {
   setIsDialogOpen: (open: boolean) => void;
 }
 export const Sort = ({ sortBy, setSortBy, setIsDialogOpen }: SortProps) => {
+  const { data: session } = useSession();
+  const { setIsLoginDialogOpen } = useAuthStore();
+  const isLoggedIn = !!session;
   const t = useTranslations("CommunityPage");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const sortOptions = [
     { key: "latest", label: t("sort.latest"), icon: Clock },
     { key: "popular", label: t("sort.popular"), icon: Heart },
   ];
 
   const handleLogin = () => {
-    setIsLoggedIn(true);
+    setIsLoginDialogOpen(true);
   };
+
   const handleOpenCreatePost = () => {
     setIsDialogOpen(true);
   };
+
   return (
     <motion.div variants={item} className="mb-6">
       <div className="flex w-full gap-2 justify-end items-center ">

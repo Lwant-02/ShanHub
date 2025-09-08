@@ -28,3 +28,8 @@ interface Post {
   liked: boolean;
   category: string;
 }
+
+enum Provider {
+  GOOGLE = "google",
+  FACEBOOK = "facebook",
+}

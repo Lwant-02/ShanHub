@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const formatDate = (dateString: string) => {
+export const formatDate = (dateString: string | Date) => {
   const date = new Date(dateString);
   return date.toLocaleDateString("en-US", {
     year: "numeric",
@@ -19,6 +19,7 @@ export const calculateAverageRating = ({ ratings }: { ratings: any[] }) => {
     ? ratings.reduce((sum, rating) => sum + rating.rating, 0) / ratings.length
     : 0;
 };
+
 export const formatTimeAgo = (timestamp: Date) => {
   const now = new Date();
   const diffInMinutes = Math.floor(
