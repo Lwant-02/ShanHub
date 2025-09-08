@@ -18,14 +18,25 @@ import { cn } from "@/lib/utils";
 import { MobileNav } from "./MobileNav";
 import { LoginDialog } from "../features/auth/LoginDialog";
 import { LocalSwitcher } from "../features/overview/LocalSwitcher";
+import { useSession } from "@/lib/auth-client";
+import { AccountSkeleton } from "../features/overview/AccountSkeleton";
+import { AccountDropdown } from "../features/overview/AccountDropdown";
+import { useAuthStore } from "@/store/auth.store";
 
 export default function Navbar() {
+  const { data: session, isPending } = useSession();
   const t = useTranslations("Navbar");
   const pathName = usePathname();
+  const ignorePage = [
+    "/shn/error",
+    "/eng/error",
+    "/shn/not-found",
+    "/eng/not-found",
+  ];
 
+  const { isLoginDialogOpen, setIsLoginDialogOpen } = useAuthStore();
   const [isUserScrolled, setIsUserScrolled] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-  const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
 
   const handleLogin = () => {
@@ -43,6 +54,10 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  if (ignorePage.includes(pathName)) {
+    return null;
+  }
 
   return (
     <>
@@ -113,16 +128,22 @@ export default function Navbar() {
               onOpenChange={setIsLanguageDropdownOpen}
               open={isLanguageDropdownOpen}
             />
-            <button
-              type="button"
-              onClick={handleLogin}
-              className={cn(
-                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300 cursor-pointer"
-              )}
-            >
-              <User className="size-4" />
-              <span className="text-base text-center">{t("login")}</span>
-            </button>
+            {isPending ? (
+              <AccountSkeleton />
+            ) : session?.user && !isPending ? (
+              <AccountDropdown />
+            ) : (
+              <button
+                type="button"
+                onClick={handleLogin}
+                className={cn(
+                  "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300 cursor-pointer"
+                )}
+              >
+                <User className="size-4" />
+                <span className="text-base text-center">{t("login")}</span>
+              </button>
+            )}
           </div>
           <div className="xl:hidden flex justify-center items-center">
             <MobileNav

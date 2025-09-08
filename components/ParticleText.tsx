@@ -11,7 +11,7 @@ interface ParticleTextProps {
 export const ParticleText: React.FC<ParticleTextProps> = ({
   text = "PARTICLES",
   className = "",
-  particleCount = 50,
+  particleCount = 100,
   particleColor = "#3b82f6",
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);

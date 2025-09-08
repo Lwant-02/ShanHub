@@ -6,16 +6,31 @@
     "community": "Community",
     "faq": "FAQ",
     "language": "Language",
-    "login": "Login"
+    "login": "Login",
+    "account": {
+      "my_account": "My Account",
+      "profile": "Profile",
+      "logout": "Logout"
+    }
   },
   "Auth": {
-    "title": "Easy Access with Google",
-    "sub_title": "Login to your account with your Google account.",
-    "btn_text": "Continue with Google",
+    "title": "Easy Access with Social Account",
+    "sub_title": "Login to your account with your social account.",
+    "google_text": "Continue with Google",
+    "or": "or",
+    "facebook_text": "Continue with Facebook",
     "terms_agreement": "I agree to the",
     "terms_of_service": "Terms of Service",
     "and": "and",
     "privacy_policy": "Privacy Policy"
+  },
+  "Account": {
+    "title": "'s Profile",
+    "subtitle": "Manage your profile information",
+    "display_name": "Display Name",
+    "member_since": "Member Since",
+    "save_changes": "Save Changes",
+    "account": "Your avatar and information come from"
   },
   "HomePage": {
     "Hero": {

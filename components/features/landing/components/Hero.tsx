@@ -92,8 +92,8 @@ export const Hero = () => {
 
         {/* Main Heading */}
         <div className="relative mt-4">
-          <div className="absolute -top-4 -right-1 size-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-ping"></div>
-          <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-gradient-to-r from-green-400 to-blue-500 rounded-full animate-pulse"></div>
+          <div className="absolute -top-4 -right-1 size-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-ping" />
+          <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-gradient-to-r from-green-400 to-blue-500 rounded-full animate-pulse" />
 
           <motion.div variants={item} className="mb-2">
             <ParticleText text={t("main_intro")} />

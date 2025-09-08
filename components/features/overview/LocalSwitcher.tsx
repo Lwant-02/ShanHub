@@ -30,7 +30,7 @@ export const LocalSwitcher = ({ open, onOpenChange }: LocalSwitcherProps) => {
   const [shChecked, setShChecked] = useState<Checked>(locale === "shn");
 
   const switchLocale = (newLocale: string) => {
-    if (newLocale === locale) return; // no change
+    if (newLocale === locale) return;
     const segments = pathname.split("/");
     segments[1] = newLocale;
     router.replace(segments.join("/"));
@@ -56,7 +56,9 @@ export const LocalSwitcher = ({ open, onOpenChange }: LocalSwitcherProps) => {
           )}
         >
           <Languages className="size-4" />
-          <span className="text-base text-center">{t("language")}</span>
+          <span className="text-base text-center xl:flex hidden">
+            {t("language")}
+          </span>
         </span>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="bg-black/50 min-w-28 backdrop-blur-sm border border-green/20 rounded-2xl">
@@ -64,8 +66,8 @@ export const LocalSwitcher = ({ open, onOpenChange }: LocalSwitcherProps) => {
           checked={engChecked}
           onCheckedChange={handleEngChange}
           className={cn(
-            "hover:text-green transition-colors duration-300 cursor-pointer",
-            engChecked && "text-green"
+            "hover:text-green cursor-pointer hover:bg-green/20 transition-colors duration-300 rounded-2xl",
+            engChecked && "text-green bg-green/20"
           )}
         >
           <span className="text-base text-center capitalize">English</span>
@@ -74,8 +76,8 @@ export const LocalSwitcher = ({ open, onOpenChange }: LocalSwitcherProps) => {
           checked={shChecked}
           onCheckedChange={handleShanChange}
           className={cn(
-            "hover:text-green transition-colors duration-300 cursor-pointer",
-            shChecked && "text-green"
+            "hover:text-green cursor-pointer hover:bg-green/20 transition-colors duration-300 rounded-2xl mt-1.5",
+            shChecked && "text-green bg-green/20"
           )}
         >
           <span className="text-base text-center capitalize">Shan</span>
