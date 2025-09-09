@@ -88,7 +88,7 @@ export const FAQDialog = ({ open, onOpenChange }: FAQDialogProps) => {
                         <Input
                           placeholder={t("name_placeholder")}
                           {...field}
-                          className="border border-green/50 focus:ring-1! focus:ring-green/80 rounded-lg h-11"
+                          className="border border-green/50 focus:ring-1! focus:ring-green/80 rounded-lg h-11 "
                         />
                       </FormControl>
                       <FormMessage className="text-red-500" />
@@ -105,7 +105,7 @@ export const FAQDialog = ({ open, onOpenChange }: FAQDialogProps) => {
                         <Input
                           placeholder={t("email_placeholder")}
                           {...field}
-                          className="border border-green/50 focus:ring-1! focus:ring-green/80 rounded-lg h-11"
+                          className="border border-green/50 focus:ring-1! focus:ring-green/80 rounded-lg h-11 "
                         />
                       </FormControl>
                       <FormMessage className="text-red-500" />

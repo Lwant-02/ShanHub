@@ -24,62 +24,54 @@ export const DesktopNav = () => {
   const { data: session, isPending } = useSession();
   const { setIsLoginDialogOpen } = useAuthStore();
 
+  const navItems = [
+    {
+      label: t("home"),
+      href: "/dashboard",
+      icon: LayoutDashboard,
+    },
+    {
+      label: t("about"),
+      href: "/about",
+      icon: Info,
+    },
+    {
+      label: t("community"),
+      href: "/community",
+      icon: Handshake,
+    },
+    {
+      label: t("support"),
+      href: "/support",
+      icon: HeartPlus,
+    },
+    {
+      label: t("faq"),
+      href: "/faq",
+      icon: MessageCircleQuestion,
+    },
+  ];
+
   const handleLogin = () => {
     setIsLoginDialogOpen(true);
   };
 
   return (
     <div className="xl:flex hidden justify-center items-center gap-7">
-      <Link
-        href="/dashboard"
-        className={cn(
-          "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
-          pathName.endsWith("/dashboard") && "text-green"
-        )}
-      >
-        <LayoutDashboard className="size-4" />
-        <span className="text-base text-center">{t("home")}</span>
-      </Link>
-      <Link
-        href="/about"
-        className={cn(
-          "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
-          pathName.endsWith("/about") && "text-green"
-        )}
-      >
-        <Info className="size-4" />
-        <span className="text-base text-center">{t("about")}</span>
-      </Link>
-      <Link
-        href="/community"
-        className={cn(
-          "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
-          pathName.endsWith("/community") && "text-green"
-        )}
-      >
-        <Handshake className="size-4" />
-        <span className="text-base text-center">{t("community")}</span>
-      </Link>
-      <Link
-        href="/support"
-        className={cn(
-          "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
-          pathName.endsWith("/support") && "text-green"
-        )}
-      >
-        <HeartPlus className="size-4" />
-        <span className="text-base text-center">{t("support")}</span>
-      </Link>
-      <Link
-        href="/faq"
-        className={cn(
-          "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
-          pathName.endsWith("/faq") && "text-green"
-        )}
-      >
-        <MessageCircleQuestion className="size-4" />
-        <span className="text-base text-center">{t("faq")}</span>
-      </Link>
+      {navItems.map((item) => (
+        <Link
+          key={item.label}
+          href={item.href}
+          prefetch={true}
+          className={cn(
+            "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
+            pathName.endsWith(item.href) && "text-green"
+          )}
+        >
+          <item.icon className="size-4" />
+          <span className="text-base text-center">{item.label}</span>
+        </Link>
+      ))}
       <LocalSwitcher />
       {isPending ? (
         <AccountSkeleton />

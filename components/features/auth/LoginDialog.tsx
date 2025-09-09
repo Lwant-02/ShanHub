@@ -97,6 +97,7 @@ export const LoginDialog = ({ open, onOpenChange }: LoginDialogProps) => {
               >
                 {t("terms_agreement")}{" "}
                 <Link
+                  prefetch={true}
                   href="/terms-of-service"
                   className="text-emerald-400 hover:text-emerald-300 underline"
                   target="_blank"
@@ -107,6 +108,7 @@ export const LoginDialog = ({ open, onOpenChange }: LoginDialogProps) => {
                 {t("and")}{" "}
                 <Link
                   href="/privacy-policy"
+                  prefetch={true}
                   className="text-emerald-400 hover:text-emerald-300 underline"
                   target="_blank"
                   rel="noopener noreferrer"

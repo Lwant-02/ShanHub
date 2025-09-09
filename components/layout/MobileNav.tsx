@@ -8,7 +8,7 @@ import { MobileDrawer } from "../features/overview/MobileDrawer";
 export const MobileNav = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
-    <div className="xl:hidden flex fixed bottom-24 right-3 z-50">
+    <div className="xl:hidden flex fixed bottom-32 right-3 z-50">
       <motion.span
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
