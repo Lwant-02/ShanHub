@@ -148,7 +148,7 @@
       "title": "Information We Collect",
       "personal_information": {
         "title": "Personal Information",
-        "content": "When you use Google authentication, we collect basic profile information including your name, email address, and profile picture as provided by Google."
+        "content": "When you use Google or Facebook for authentication, we collect basic profile information including your name, email address, and profile picture as provided by Google."
       },
       "usage_data": {
         "title": "Usage Data",
@@ -400,6 +400,7 @@
   },
   "RatingPage": {
     "app_not_found": "App Not Found",
+    "login_btn": "Login",
     "go_back": "Back to Dashboard",
     "rating_btn": "Give Rating",
     "rating": "rating",
@@ -426,5 +427,22 @@
       "good": "Good",
       "excellent": "Excellent"
     }
+  },
+  "ErrorPage": {
+    "title": "Oops! Something went wrong",
+    "subtitle": "We encountered an error while processing your request",
+    "description": "Don't worry, this happens sometimes. Our team has been notified and we're working to fix it.",
+    "try_again": "Try Again",
+    "contact_support": "Contact Support",
+    "error_code": "Error Code"
+  },
+  "NotFoundPage": {
+    "title": "Page Not Found",
+    "subtitle": "The page you're looking for doesn't exist",
+    "description": "It seems like you've wandered off the beaten path. Don't worry, even the best explorers get lost sometimes!",
+    "error_code": "404",
+    "go_home": "Go Home",
+    "explore_apps": "Explore Apps",
+    "footer_text": "Lost in the digital wilderness? We'll help you find your way back!"
   }
 }

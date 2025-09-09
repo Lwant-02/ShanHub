@@ -1,86 +1,28 @@
 "use client";
-import { House, Info, Languages, Menu, User, X } from "lucide-react";
-import { usePathname } from "next/navigation";
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { MobileDrawer } from "../features/overview/MobileDrawer";
 
-export const navItem = [
-  {
-    label: "ၼႃႈႁိူၼ်း",
-    href: "/dashboard",
-    icon: <House className="size-4" />,
-  },
-  {
-    label: "လွင်ႈႁဝ်းၶႃႈ",
-    href: "/about",
-    icon: <Info className="size-4" />,
-  },
-];
-
-interface MobileNavItem {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  handleLogin: () => void;
-}
-
-export const MobileNav = ({
-  open,
-  onOpenChange,
-  handleLogin,
-}: MobileNavItem) => {
-  const pathName = usePathname();
-
+export const MobileNav = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
-    <DropdownMenu open={open} onOpenChange={onOpenChange}>
-      <DropdownMenuTrigger>
-        <span className="border-none outline-none">
-          {open ? <X className="size-6" /> : <Menu className="size-6" />}
-        </span>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-fit bg-black/50 backdrop-blur-sm border border-green/50">
-        {navItem.map((item, index) => (
-          <DropdownMenuItem key={index}>
-            <Link
-              href={item.href}
-              className={cn(
-                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
-                pathName.endsWith(item.href) && "text-green"
-              )}
-            >
-              {item.icon}
-              <span className="text-base text-center">{item.label}</span>
-            </Link>
-          </DropdownMenuItem>
-        ))}
-        <DropdownMenuItem>
-          <span
-            className={cn(
-              "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300 cursor-pointer"
-            )}
-          >
-            <Languages className="size-4" />
-            <span className="text-base text-center">Language</span>
-          </span>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <span
-            onClick={handleLogin}
-            className={cn(
-              "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300 cursor-pointer"
-            )}
-          >
-            <User className="size-4" />
-            <span className="text-base text-center">Login</span>
-          </span>
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div className="xl:hidden flex fixed bottom-24 right-3 z-50">
+      <motion.span
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        onClick={() => setIsDrawerOpen(true)}
+        className="bg-black border border-green/50 rounded-full p-2.5"
+      >
+        {isDrawerOpen ? (
+          <X className="size-5 text-white" />
+        ) : (
+          <Menu className="size-5 text-white" />
+        )}
+      </motion.span>
+      <MobileDrawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen} />
+    </div>
   );
 };

@@ -22,7 +22,7 @@ interface SortProps {
 export const Sort = ({ sortBy, setSortBy, setIsDialogOpen }: SortProps) => {
   const { data: session } = useSession();
   const { setIsLoginDialogOpen } = useAuthStore();
-  const isLoggedIn = !!session;
+  const isAuthenticated = !!session;
   const t = useTranslations("CommunityPage");
   const sortOptions = [
     { key: "latest", label: t("sort.latest"), icon: Clock },
@@ -73,17 +73,17 @@ export const Sort = ({ sortBy, setSortBy, setIsDialogOpen }: SortProps) => {
           </DropdownMenuContent>
         </DropdownMenu>
         <CustomButton
-          text={isLoggedIn ? t("create_post_button") : t("login_button")}
+          text={isAuthenticated ? t("create_post_button") : t("login_button")}
           variant="primary"
           className="w-44"
           icon={
-            isLoggedIn ? (
+            isAuthenticated ? (
               <Plus className="w-4 h-4" />
             ) : (
               <ArrowRight className="w-4 h-4" />
             )
           }
-          onClick={isLoggedIn ? handleOpenCreatePost : handleLogin}
+          onClick={isAuthenticated ? handleOpenCreatePost : handleLogin}
         />
       </div>
     </motion.div>

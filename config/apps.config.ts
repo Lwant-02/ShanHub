@@ -21,6 +21,7 @@ export const baseApps = [
     category: "language_tools",
     status: "available",
     badge: "popular",
+    required_login: false,
   },
   {
     id: "FontConverter",
@@ -30,6 +31,7 @@ export const baseApps = [
     category: "converters",
     status: "available",
     badge: "new",
+    required_login: false,
   },
   {
     id: "TaiLeConverter",
@@ -39,6 +41,7 @@ export const baseApps = [
     category: "converters",
     status: "available",
     badge: null,
+    required_login: false,
   },
   {
     id: "ShanTranslit",
@@ -48,6 +51,7 @@ export const baseApps = [
     category: "converters",
     status: "available",
     badge: null,
+    required_login: false,
   },
   {
     id: "ShanSyllable",
@@ -57,6 +61,7 @@ export const baseApps = [
     category: "converters",
     status: "available",
     badge: null,
+    required_login: false,
   },
   {
     id: "TaiLeSyllable",
@@ -66,6 +71,7 @@ export const baseApps = [
     category: "converters",
     status: "available",
     badge: null,
+    required_login: false,
   },
   {
     id: "ShanWordSorting",
@@ -75,6 +81,7 @@ export const baseApps = [
     category: "utilities",
     status: "available",
     badge: null,
+    required_login: false,
   },
   {
     id: "ShanProverbs",
@@ -84,6 +91,7 @@ export const baseApps = [
     category: "cultural",
     status: "available",
     badge: "popular",
+    required_login: false,
   },
   {
     id: "DokSu",
@@ -93,6 +101,7 @@ export const baseApps = [
     category: "cultural",
     status: "available",
     badge: null,
+    required_login: false,
   },
   {
     id: "PakPi",
@@ -102,6 +111,7 @@ export const baseApps = [
     category: "cultural",
     status: "available",
     badge: null,
+    required_login: false,
   },
   {
     id: "ShanNote",
@@ -111,5 +121,6 @@ export const baseApps = [
     category: "utilities",
     status: "coming_soon",
     badge: "new",
+    required_login: true,
   },
 ];
