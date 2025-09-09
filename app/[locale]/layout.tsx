@@ -6,6 +6,7 @@ import { getMessages } from "next-intl/server";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { routing } from "@/i18n/routing";
+import { MobileNav } from "@/components/layout/MobileNav";
 
 export const metadata: Metadata = {
   title: "ShanHub | Welcome to ShanHub",
@@ -29,6 +30,7 @@ export default async function RootLayout({
   params,
 }: RootLayoutProps) {
   const { locale } = await params;
+
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
@@ -50,6 +52,7 @@ export default async function RootLayout({
               <div className="max-w-6xl mx-auto xl:px-0 px-3 overflow-x-hidden">
                 {children}
               </div>
+              <MobileNav />
             </main>
           </NextIntlClientProvider>
         </div>

@@ -8,23 +8,20 @@ import { CommentCard } from "./CommentCard";
 import { CommentForm } from "./CommentForm";
 import { CustomButton } from "@/components/CustomButton";
 import { LoginDialog } from "../../auth/LoginDialog";
+import { useSession } from "@/lib/auth-client";
 
 interface PostCardProps {
   post: any;
   formatTimeAgo: (timestamp: Date) => string;
   t: any;
-  isLoggedIn?: boolean;
 }
 
-export const PostCard = ({
-  post,
-  formatTimeAgo,
-  t,
-  isLoggedIn = true,
-}: PostCardProps) => {
+export const PostCard = ({ post, formatTimeAgo, t }: PostCardProps) => {
+  const { data: session } = useSession();
   const [showComments, setShowComments] = useState(false);
   const [posts, setPosts] = useState([post]);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const isAuthenticated = !!session;
 
   const handleLike = (postId: number) => {
     setPosts(
@@ -70,6 +67,7 @@ export const PostCard = ({
             <Button
               variant="ghost"
               size="sm"
+              disabled={!isAuthenticated}
               onClick={() => handleLike(post.id)}
               className={`gap-2 cursor-pointer ${
                 post.liked
@@ -105,7 +103,7 @@ export const PostCard = ({
               </div>
 
               {/* Add Comment */}
-              {isLoggedIn ? (
+              {isAuthenticated ? (
                 <CommentForm />
               ) : (
                 <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 backdrop-blur-sm border border-emerald-500/30 rounded-2xl p-5 text-center flex flex-col gap-3">

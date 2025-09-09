@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Plus, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, Plus, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 import { StarRating } from "@/components/ui/star-rating";
 import { CustomButton } from "@/components/CustomButton";
+import { useSession } from "@/lib/auth-client";
+import { useAuthStore } from "@/store/auth.store";
 
 interface HeaderProps {
   name: string;
@@ -25,8 +27,11 @@ export const Header = ({
   showRatingForm,
   setShowRatingForm,
 }: HeaderProps) => {
+  const { data: session } = useSession();
+  const { setIsLoginDialogOpen } = useAuthStore();
   const t = useTranslations("RatingPage");
   const router = useRouter();
+  const isAuthenticated = !!session;
 
   const handleCancel = () => {
     setShowRatingForm(false);
@@ -71,19 +76,29 @@ export const Header = ({
           </div>
         </div>
         <div className="flex items-center justify-end w-full">
-          <CustomButton
-            text={showRatingForm ? t("close_btn") : t("rating_btn")}
-            icon={
-              showRatingForm ? (
-                <X className="w-4 h-4 mr-2" />
-              ) : (
-                <Plus className="w-4 h-4 mr-2" />
-              )
-            }
-            variant="primary"
-            onClick={showRatingForm ? handleCancel : handleRate}
-            className="w-40"
-          />
+          {isAuthenticated ? (
+            <CustomButton
+              text={showRatingForm ? t("close_btn") : t("rating_btn")}
+              icon={
+                showRatingForm ? (
+                  <X className="w-4 h-4 mr-2" />
+                ) : (
+                  <Plus className="w-4 h-4 mr-2" />
+                )
+              }
+              variant="primary"
+              onClick={showRatingForm ? handleCancel : handleRate}
+              className="w-40"
+            />
+          ) : (
+            <CustomButton
+              text={t("login_btn")}
+              icon={<ArrowRight className="w-4 h-4 mr-2" />}
+              variant="primary"
+              onClick={() => setIsLoginDialogOpen(true)}
+              className="w-40"
+            />
+          )}
         </div>
       </div>
     </motion.div>

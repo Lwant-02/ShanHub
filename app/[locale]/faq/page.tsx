@@ -1,4 +1,3 @@
-import React from "react";
 import { Metadata } from "next";
 
 import { FAQViewPage } from "@/components/features/faq/FAQViewPage";

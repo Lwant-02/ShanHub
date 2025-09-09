@@ -1,7 +1,7 @@
 "use client";
 import { Languages } from "lucide-react";
 import { useState } from "react";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 
 import {
@@ -15,8 +15,7 @@ import { cn } from "@/lib/utils";
 
 type Checked = DropdownMenuCheckboxItemProps["checked"];
 
-export const LocalSwitcher = () => {
-  const t = useTranslations("Navbar");
+export const MobileLocalSwitcher = () => {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -48,11 +47,10 @@ export const LocalSwitcher = () => {
       <DropdownMenuTrigger>
         <span
           className={cn(
-            "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300 cursor-pointer"
+            " flex justify-center items-center rounded-full gap-1 hover:text-green transition-colors duration-300 cursor-pointer backdrop-blur-sm border border-green/20 bg-black/50 p-3"
           )}
         >
           <Languages className="size-4" />
-          <span className="text-base text-center ">{t("language")}</span>
         </span>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="bg-black/50 min-w-28 backdrop-blur-sm border border-green/20 rounded-2xl">
@@ -64,7 +62,7 @@ export const LocalSwitcher = () => {
             engChecked && "text-green bg-green/20"
           )}
         >
-          <span className="text-base text-center capitalize">English</span>
+          <span className="text-sm text-center capitalize">English</span>
         </DropdownMenuCheckboxItem>
         <DropdownMenuCheckboxItem
           checked={shChecked}
@@ -74,7 +72,7 @@ export const LocalSwitcher = () => {
             shChecked && "text-green bg-green/20"
           )}
         >
-          <span className="text-base text-center capitalize">Shan</span>
+          <span className="text-sm text-center capitalize">Shan</span>
         </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>

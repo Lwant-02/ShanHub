@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { CircleUser, LogOut } from "lucide-react";
+import { useState } from "react";
 
 import { signOut, useSession } from "@/lib/auth-client";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -12,7 +13,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { AccountDialog } from "./AccountDialog";
-import { useState } from "react";
 
 export const AccountDropdown = () => {
   const t = useTranslations("Navbar");
@@ -30,7 +30,7 @@ export const AccountDropdown = () => {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Avatar className="size-10 border border-green cursor-pointer">
+          <Avatar className="xl:size-10 size-9 border border-green cursor-pointer">
             <AvatarImage
               src={session.user.image || ""}
               className="object-cover size-full"
