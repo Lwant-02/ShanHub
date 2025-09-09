@@ -4,7 +4,7 @@ export const developers_contacts = [
     link: "https://www.facebook.com/saing.hmine.tun",
   },
   {
-    title: "Current Maintainer - Sai Naw Main",
+    title: "Current - Sai Naw Main",
     link: "https://www.facebook.com/nawmong02",
   },
 ];

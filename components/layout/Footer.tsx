@@ -43,7 +43,11 @@ export const Footer = () => {
               <ul className="list-disc list-inside text-gray-400 space-y-2 ml-4">
                 {links.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href} className="hover:text-green">
+                    <Link
+                      href={link.href}
+                      prefetch={true}
+                      className="hover:text-green"
+                    >
                       {link.label}
                     </Link>
                   </li>
@@ -59,6 +63,7 @@ export const Footer = () => {
                   <li key={index}>
                     <Link
                       href={link.href}
+                      prefetch={true}
                       className="hover:text-green"
                       target="_blank"
                       rel="noopener noreferrer"

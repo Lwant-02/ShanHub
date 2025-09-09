@@ -49,7 +49,7 @@ export default async function RootLayout({
           <NextIntlClientProvider messages={messages}>
             <main className="relative z-10 h-full w-full">
               <Navbar />
-              <div className="max-w-6xl mx-auto xl:px-0 px-3 overflow-x-hidden">
+              <div className="max-w-6xl mx-auto xl:px-0 px-3 overflow-x-hidden overflow-hidden">
                 {children}
               </div>
               <MobileNav />

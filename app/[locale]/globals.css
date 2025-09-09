@@ -33,4 +33,13 @@
   body {
     @apply text-primary font-primary;
   }
+  ::selection {
+    background-color: rgba(34, 197, 94, 0.3) !important;
+    color: #ffffff;
+  }
+
+  ::-moz-selection {
+    background-color: rgba(34, 197, 94, 0.3) !important;
+    color: #ffffff;
+  }
 }

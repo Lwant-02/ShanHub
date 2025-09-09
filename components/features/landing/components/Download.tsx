@@ -1,7 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
-import { Download as DownloadIcon, Smartphone, Monitor } from "lucide-react";
+import { Download as DownloadIcon, Monitor } from "lucide-react";
 
 import { Button } from "../../../ui/button";
 import AnimateOnview from "@/components/AnimateOnview";
@@ -52,28 +52,7 @@ export const Download = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Mobile Download */}
-            <div className="bg-gradient-to-br from-emerald-500/10 to-blue-500/10 rounded-2xl p-6 border border-emerald-500/20 backdrop-blur-sm text-center">
-              <div className="flex justify-center mb-4">
-                <div className="p-3 bg-emerald-500/20 rounded-full">
-                  <Smartphone className="w-8 h-8 text-emerald-400" />
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                {t("mobile_title")}
-              </h3>
-              <p className="opacity-80 mb-4">{t("mobile_content")}</p>
-              <Button
-                onClick={handleInstall}
-                disabled={!isInstallable}
-                className="w-full bg-gradient-to-r cursor-pointer from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white border-0"
-              >
-                <DownloadIcon className="w-4 h-4 mr-2" />
-                {t("install_button")}
-              </Button>
-            </div>
-
+          <div className="grid grid-cols-1 gap-8 mb-12">
             {/* Desktop Download */}
             <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-6 border border-blue-500/20 backdrop-blur-sm text-center">
               <div className="flex justify-center mb-4">

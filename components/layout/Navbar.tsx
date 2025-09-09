@@ -50,7 +50,7 @@ export default function Navbar() {
         })}
       >
         <div className="flex justify-between items-center h-full max-w-6xl mx-auto xl:px-0 px-3">
-          <Link href="/" className=" text-2xl">
+          <Link href="/" className=" text-2xl" prefetch={true}>
             ShanHub
           </Link>
           <DesktopNav />

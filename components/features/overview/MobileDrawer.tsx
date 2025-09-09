@@ -8,18 +8,15 @@ import {
   LayoutDashboard,
   MessageCircleQuestion,
   User,
-  X,
 } from "lucide-react";
 
 import { useSession } from "@/lib/auth-client";
 import { useAuthStore } from "@/store/auth.store";
 import { cn } from "@/lib/utils";
-import { CustomButton } from "@/components/CustomButton";
 import {
   Drawer,
   DrawerContent,
   DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
 } from "@/components/ui/drawer";
@@ -36,6 +33,35 @@ export const MobileDrawer = ({ onOpenChange, open }: MobileDrawerProps) => {
   const pathName = usePathname();
   const { data: session, isPending } = useSession();
   const { setIsLoginDialogOpen } = useAuthStore();
+
+  const navItems = [
+    {
+      label: t("home"),
+      href: "/dashboard",
+      icon: LayoutDashboard,
+    },
+    {
+      label: t("about"),
+      href: "/about",
+      icon: Info,
+    },
+    {
+      label: t("community"),
+      href: "/community",
+      icon: Handshake,
+    },
+    {
+      label: t("support"),
+      href: "/support",
+      icon: HeartPlus,
+    },
+    {
+      label: t("faq"),
+      href: "/faq",
+      icon: MessageCircleQuestion,
+    },
+  ];
+
   const handleLogin = () => {
     setIsLoginDialogOpen(true);
   };
@@ -47,57 +73,21 @@ export const MobileDrawer = ({ onOpenChange, open }: MobileDrawerProps) => {
           <DrawerDescription className="sr-only">
             This is the navigation for ShanHub.
           </DrawerDescription>
-          <div className="grid gap-4 grid-cols-2 mt-5 place-items-start w-80 mx-auto">
-            <Link
-              href="/dashboard"
-              className={cn(
-                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
-                pathName.endsWith("/dashboard") && "text-green"
-              )}
-            >
-              <LayoutDashboard className="size-4" />
-              <span className="text-base text-center">{t("home")}</span>
-            </Link>
-            <Link
-              href="/about"
-              className={cn(
-                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
-                pathName.endsWith("/about") && "text-green"
-              )}
-            >
-              <Info className="size-4" />
-              <span className="text-base text-center">{t("about")}</span>
-            </Link>
-            <Link
-              href="/community"
-              className={cn(
-                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
-                pathName.endsWith("/community") && "text-green"
-              )}
-            >
-              <Handshake className="size-4" />
-              <span className="text-base text-center">{t("community")}</span>
-            </Link>
-            <Link
-              href="/support"
-              className={cn(
-                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
-                pathName.endsWith("/support") && "text-green"
-              )}
-            >
-              <HeartPlus className="size-4" />
-              <span className="text-base text-center">{t("support")}</span>
-            </Link>
-            <Link
-              href="/faq"
-              className={cn(
-                "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
-                pathName.endsWith("/faq") && "text-green"
-              )}
-            >
-              <MessageCircleQuestion className="size-4" />
-              <span className="text-base text-center">{t("faq")}</span>
-            </Link>
+          <div className="grid gap-5 grid-cols-2 mt-5 place-items-start w-64 mx-auto">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                prefetch={true}
+                className={cn(
+                  "flex justify-center items-center gap-1 hover:text-green transition-colors duration-300",
+                  pathName.endsWith(item.href) && "text-green"
+                )}
+              >
+                <item.icon className="size-4" />
+                <span className="text-base text-center">{item.label}</span>
+              </Link>
+            ))}
             {isPending ? (
               <AccountSkeleton />
             ) : session?.user && !isPending ? (
@@ -116,15 +106,6 @@ export const MobileDrawer = ({ onOpenChange, open }: MobileDrawerProps) => {
             )}
           </div>
         </DrawerHeader>
-        <DrawerFooter>
-          <CustomButton
-            text="Close"
-            variant="secondary"
-            type="button"
-            icon={<X className="w-4 h-4" />}
-            onClick={() => onOpenChange(false)}
-          />
-        </DrawerFooter>
       </DrawerContent>
     </Drawer>
   );
