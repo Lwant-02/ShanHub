@@ -1,11 +1,11 @@
 import { create } from "zustand";
 
 interface UtilStore {
-  isLanguageDropdownOpen: boolean;
-  setIsLanguageDropdownOpen: (isLanguageDropdownOpen: boolean) => void;
+  isCreatePostDialogOpen: boolean;
+  setisCreatePostDialogOpen: (isCreatePostDialogOpen: boolean) => void;
 }
 
 export const useUtilStore = create<UtilStore>((set) => ({
-  isLanguageDropdownOpen: false,
-  setIsLanguageDropdownOpen: (v: boolean) => set({ isLanguageDropdownOpen: v }),
+  isCreatePostDialogOpen: false,
+  setisCreatePostDialogOpen: (v: boolean) => set({ isCreatePostDialogOpen: v }),
 }));

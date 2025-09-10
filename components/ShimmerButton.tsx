@@ -35,6 +35,7 @@ export default function ShimmerButton({
       <style>{customCss}</style>
       <Link
         href={link || "#"}
+        prefetch={true}
         className="relative inline-flex items-center justify-center p-[1.5px]  rounded-full overflow-hidden group cursor-pointer"
       >
         <div

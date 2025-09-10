@@ -44,7 +44,7 @@ export const AccountDialog = ({
   const joinedDate = session?.user?.createdAt ?? "Unknown";
 
   const formSchema = z.object({
-    name: z.string().min(3, { message: "Name must be at least 2 characters." }),
+    name: z.string().min(3, { message: t("name_error") }),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -85,7 +85,7 @@ export const AccountDialog = ({
                 className="object-cover size-full"
               />
               <AvatarFallback className="bg-green/20 text-green">
-                {originalName}
+                {originalName.split(" ")[0]}
               </AvatarFallback>
             </Avatar>
 

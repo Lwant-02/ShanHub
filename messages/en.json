@@ -30,7 +30,8 @@
     "display_name": "Display Name",
     "member_since": "Member Since",
     "save_changes": "Save Changes",
-    "account": "Your avatar and information come from"
+    "account": "Your avatar and information come from",
+    "name_error": "Name must be at least 2 characters."
   },
   "HomePage": {
     "Hero": {

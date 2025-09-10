@@ -8,6 +8,7 @@ import Navbar from "@/components/layout/Navbar";
 import { routing } from "@/i18n/routing";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { Toaster } from "@/components/ui/sonner";
+import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 
 export const metadata: Metadata = {
   title: "ShanHub | Welcome to ShanHub",
@@ -54,6 +55,7 @@ export default async function RootLayout({
                 {children}
               </div>
               <MobileNav />
+              <ScrollToTopButton />
               <Toaster
                 toastOptions={{
                   duration: 4000,

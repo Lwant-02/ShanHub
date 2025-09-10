@@ -10,7 +10,6 @@ import { PostFormDialog } from "./components/PostFormDialog";
 
 export default function CommunityViewPage() {
   const [sortBy, setSortBy] = useState("latest");
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
     <div className="min-h-screen py-8">
@@ -24,20 +23,13 @@ export default function CommunityViewPage() {
         <Header />
 
         {/*  Sort */}
-        <Sort
-          sortBy={sortBy}
-          setSortBy={setSortBy}
-          setIsDialogOpen={setIsDialogOpen}
-        />
+        <Sort sortBy={sortBy} setSortBy={setSortBy} />
 
         {/* Posts Feed */}
         <PostFeed />
 
         {/* Create Post dialog */}
-        <PostFormDialog
-          isDialogOpen={isDialogOpen}
-          setIsDialogOpen={setIsDialogOpen}
-        />
+        <PostFormDialog />
       </motion.div>
     </div>
   );

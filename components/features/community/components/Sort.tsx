@@ -13,14 +13,15 @@ import { item } from "../../landing/components/Hero";
 import { CustomButton } from "@/components/CustomButton";
 import { useSession } from "@/lib/auth-client";
 import { useAuthStore } from "@/store/auth.store";
+import { useUtilStore } from "@/store/util.store";
 
 interface SortProps {
   sortBy: string;
   setSortBy: (sort: string) => void;
-  setIsDialogOpen: (open: boolean) => void;
 }
-export const Sort = ({ sortBy, setSortBy, setIsDialogOpen }: SortProps) => {
+export const Sort = ({ sortBy, setSortBy }: SortProps) => {
   const { data: session } = useSession();
+  const { setisCreatePostDialogOpen } = useUtilStore();
   const { setIsLoginDialogOpen } = useAuthStore();
   const isAuthenticated = !!session;
   const t = useTranslations("CommunityPage");
@@ -34,7 +35,7 @@ export const Sort = ({ sortBy, setSortBy, setIsDialogOpen }: SortProps) => {
   };
 
   const handleOpenCreatePost = () => {
-    setIsDialogOpen(true);
+    setisCreatePostDialogOpen(true);
   };
 
   return (

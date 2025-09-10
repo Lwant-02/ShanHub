@@ -22,8 +22,7 @@ export default function DashboardViewPage() {
   const recentlyUsed = apps.slice(0, 3);
 
   const handleLaunchApp = (appId: string) => {
-    // In a real app, this would navigate to the specific app
-    console.log(`Launching app: ${appId}`);
+    router.push(`/dashboard/${appId}`);
   };
 
   const handleRateApp = (appId: string) => {

@@ -11,10 +11,10 @@ export const Footer = () => {
 
   const links = [
     { label: t("dashboard"), href: "/" },
-    { label: t("about"), href: "/about" },
     { label: t("community"), href: "/community" },
     { label: t("support"), href: "/support" },
     { label: t("faq"), href: "/faq" },
+    { label: t("about"), href: "/about" },
   ];
   const terms_policy = [
     { label: t("terms_of_service"), href: "/terms-of-service" },

@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { ArrowRight, Heart, MessageCircle } from "lucide-react";
+import {
+  ArrowRight,
+  FilePen,
+  Heart,
+  MessageCircle,
+  Trash2,
+} from "lucide-react";
 
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -9,6 +15,7 @@ import { CommentForm } from "./CommentForm";
 import { CustomButton } from "@/components/CustomButton";
 import { LoginDialog } from "../../auth/LoginDialog";
 import { useSession } from "@/lib/auth-client";
+import { useUtilStore } from "@/store/util.store";
 
 interface PostCardProps {
   post: any;
@@ -18,6 +25,7 @@ interface PostCardProps {
 
 export const PostCard = ({ post, formatTimeAgo, t }: PostCardProps) => {
   const { data: session } = useSession();
+  const { setisCreatePostDialogOpen } = useUtilStore();
   const [showComments, setShowComments] = useState(false);
   const [posts, setPosts] = useState([post]);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -40,7 +48,7 @@ export const PostCard = ({ post, formatTimeAgo, t }: PostCardProps) => {
   return (
     <>
       <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
-        <CardHeader className="flex justify-start items-center">
+        <CardHeader className="flex justify-between items-start">
           <div className="flex items-start gap-3 py-2">
             <Avatar className="w-10 h-10">
               <AvatarImage
@@ -59,11 +67,19 @@ export const PostCard = ({ post, formatTimeAgo, t }: PostCardProps) => {
               </p>
             </div>
           </div>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setisCreatePostDialogOpen(true)}
+            className="gap-2 text-gray-400 hover:text-blue-400 cursor-pointer"
+          >
+            <FilePen className="size-5" />
+          </Button>
         </CardHeader>
         <CardContent className="pt-0 ">
           <p className="text-gray-300 leading-relaxed mb-4">{post.content}</p>
           {/* Post Actions */}
-          <div className="flex items-center gap-6 pt-4 border-t border-white/10">
+          <div className="flex items-center gap-4 pt-4 border-t border-white/10">
             <Button
               variant="ghost"
               size="sm"
@@ -89,6 +105,15 @@ export const PostCard = ({ post, formatTimeAgo, t }: PostCardProps) => {
             >
               <MessageCircle className="w-4 h-4" />
               {post.comments}
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setShowComments(!showComments)}
+              className="gap-2 text-red-400/80 hover:text-red-400 cursor-pointer"
+            >
+              <Trash2 className="w-4 h-4" />
             </Button>
           </div>
 

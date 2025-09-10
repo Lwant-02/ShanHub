@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Send } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -22,18 +21,11 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { useUtilStore } from "@/store/util.store";
 
-type CreatePostFormDialogValues = {
-  isDialogOpen: boolean;
-  setIsDialogOpen: (open: boolean) => void;
-};
-
-export const PostFormDialog = ({
-  isDialogOpen,
-  setIsDialogOpen,
-}: CreatePostFormDialogValues) => {
+export const PostFormDialog = () => {
   const t = useTranslations("CommunityPage.form");
-  const [isCreatingPost, setIsCreatingPost] = useState(false);
+  const { isCreatePostDialogOpen, setisCreatePostDialogOpen } = useUtilStore();
 
   const formSchema = z.object({
     content: z.string().min(10, { message: t("post_error") }),
@@ -48,11 +40,14 @@ export const PostFormDialog = ({
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     console.log(values);
-    setIsDialogOpen(false);
+    setisCreatePostDialogOpen(false);
   };
 
   return (
-    <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+    <Dialog
+      open={isCreatePostDialogOpen}
+      onOpenChange={setisCreatePostDialogOpen}
+    >
       <DialogContent className="bg-black/70 backdrop-blur-sm border border-green/20 rounded-2xl ">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
@@ -94,7 +89,6 @@ export const PostFormDialog = ({
                     text={t("cancel_button")}
                     variant="secondary"
                     onClick={() => {
-                      setIsCreatingPost(false);
                       form.reset();
                     }}
                   />

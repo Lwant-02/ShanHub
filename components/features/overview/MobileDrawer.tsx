@@ -41,11 +41,6 @@ export const MobileDrawer = ({ onOpenChange, open }: MobileDrawerProps) => {
       icon: LayoutDashboard,
     },
     {
-      label: t("about"),
-      href: "/about",
-      icon: Info,
-    },
-    {
       label: t("community"),
       href: "/community",
       icon: Handshake,
@@ -60,6 +55,11 @@ export const MobileDrawer = ({ onOpenChange, open }: MobileDrawerProps) => {
       href: "/faq",
       icon: MessageCircleQuestion,
     },
+    {
+      label: t("about"),
+      href: "/about",
+      icon: Info,
+    },
   ];
 
   const handleLogin = () => {
@@ -67,7 +67,7 @@ export const MobileDrawer = ({ onOpenChange, open }: MobileDrawerProps) => {
   };
   return (
     <Drawer open={open} onOpenChange={onOpenChange} direction="top">
-      <DrawerContent className="bg-black/50 backdrop-blur-sm border border-green/20 xl:hidden ">
+      <DrawerContent className="bg-black/50 backdrop-blur-sm border border-green/20 xl:hidden focus-visible:outline-none">
         <DrawerHeader>
           <DrawerTitle className="text-2xl opacity-50">ShanHub</DrawerTitle>
           <DrawerDescription className="sr-only">
