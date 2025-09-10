@@ -5,7 +5,9 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
-import { Send } from "lucide-react";
+import { Send, X } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
 
 import {
   Dialog,
@@ -25,6 +27,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CustomButton } from "@/components/CustomButton";
+import { axiosInstance } from "@/config/axios.config";
 
 interface FAQDialogProps {
   open: boolean;
@@ -33,6 +36,7 @@ interface FAQDialogProps {
 
 export const FAQDialog = ({ open, onOpenChange }: FAQDialogProps) => {
   const t = useTranslations("FAQPage.contact.contact_form");
+  const [isSending, setIsSending] = useState(false);
 
   const formSchema = z.object({
     name: z
@@ -52,8 +56,34 @@ export const FAQDialog = ({ open, onOpenChange }: FAQDialogProps) => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      setIsSending(true);
+      const res = await axiosInstance.post("/send", values);
+      if (res.data.success) {
+        onOpenChange(false);
+        toast.success("Success!", {
+          description: "Your message has been sent.",
+          action: {
+            label: <X className="size-4" />,
+            onClick: () => toast.dismiss(),
+          },
+        });
+        form.reset();
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("Error!", {
+        description: "There was an error sending your message.",
+        action: {
+          label: <X className="size-4" />,
+          onClick: () => toast.dismiss(),
+        },
+      });
+      setIsSending(false);
+    } finally {
+      setIsSending(false);
+    }
   }
 
   return (
@@ -134,6 +164,7 @@ export const FAQDialog = ({ open, onOpenChange }: FAQDialogProps) => {
                   variant="primary"
                   className="w-full mt-3"
                   type="submit"
+                  isLoading={isSending}
                   icon={<Send className="w-4 h-4" />}
                 />
               </form>

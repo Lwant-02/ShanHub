@@ -7,6 +7,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { routing } from "@/i18n/routing";
 import { MobileNav } from "@/components/layout/MobileNav";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "ShanHub | Welcome to ShanHub",
@@ -53,6 +54,17 @@ export default async function RootLayout({
                 {children}
               </div>
               <MobileNav />
+              <Toaster
+                toastOptions={{
+                  duration: 4000,
+                  style: {
+                    background: "#222831",
+                    color: "#67c090",
+                    fontSize: "13px",
+                  },
+                }}
+                position="top-right"
+              />
             </main>
           </NextIntlClientProvider>
         </div>
