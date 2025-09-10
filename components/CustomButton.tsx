@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
+import { Spinner } from "./Spinner";
 
 interface CustomButtonProps {
   text: string;
@@ -12,6 +13,7 @@ interface CustomButtonProps {
   onClick?: () => void;
   disabled?: boolean;
   type?: "button" | "submit";
+  isLoading?: boolean;
 }
 
 const getButtonClassName = ({
@@ -35,6 +37,7 @@ export const CustomButton = ({
   onClick,
   disabled,
   type = "button",
+  isLoading,
 }: CustomButtonProps) => {
   const router = useRouter();
   return (
@@ -48,8 +51,14 @@ export const CustomButton = ({
       }}
       className={`${getButtonClassName({ variant })} ${className} `}
     >
-      {text}
-      {icon}
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <>
+          {text}
+          {icon}
+        </>
+      )}
     </Button>
   );
 };

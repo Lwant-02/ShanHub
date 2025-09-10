@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
-import { CircleUser, LogOut } from "lucide-react";
+import { CircleUser, LogOut, X } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
 
 import { signOut, useSession } from "@/lib/auth-client";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -24,6 +25,13 @@ export const AccountDropdown = () => {
   }
   const handleLogout = async () => {
     await signOut();
+    toast.success("Success!", {
+      description: "You have been logged out.",
+      action: {
+        label: <X className="size-4" />,
+        onClick: () => toast.dismiss(),
+      },
+    });
   };
 
   return (
