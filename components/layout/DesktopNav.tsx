@@ -31,11 +31,6 @@ export const DesktopNav = () => {
       icon: LayoutDashboard,
     },
     {
-      label: t("about"),
-      href: "/about",
-      icon: Info,
-    },
-    {
       label: t("community"),
       href: "/community",
       icon: Handshake,
@@ -49,6 +44,11 @@ export const DesktopNav = () => {
       label: t("faq"),
       href: "/faq",
       icon: MessageCircleQuestion,
+    },
+    {
+      label: t("about"),
+      href: "/about",
+      icon: Info,
     },
   ];
 
