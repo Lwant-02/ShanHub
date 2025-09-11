@@ -22,6 +22,7 @@ export const baseApps = [
     status: "available",
     badge: "popular",
     required_login: false,
+    link: "https://likdai.shantype.com",
   },
   {
     id: "FontConverter",
@@ -32,6 +33,7 @@ export const baseApps = [
     status: "available",
     badge: "new",
     required_login: false,
+    link: "",
   },
   {
     id: "TaiLeConverter",
@@ -42,6 +44,7 @@ export const baseApps = [
     status: "available",
     badge: null,
     required_login: false,
+    link: "",
   },
   {
     id: "ShanTranslit",
@@ -52,6 +55,7 @@ export const baseApps = [
     status: "available",
     badge: null,
     required_login: false,
+    link: "",
   },
   {
     id: "ShanSyllable",
@@ -62,6 +66,7 @@ export const baseApps = [
     status: "available",
     badge: null,
     required_login: false,
+    link: "",
   },
   {
     id: "TaiLeSyllable",
@@ -72,6 +77,7 @@ export const baseApps = [
     status: "available",
     badge: null,
     required_login: false,
+    link: "",
   },
   {
     id: "ShanWordSorting",
@@ -82,6 +88,7 @@ export const baseApps = [
     status: "available",
     badge: null,
     required_login: false,
+    link: "",
   },
   {
     id: "ShanProverbs",
@@ -92,6 +99,7 @@ export const baseApps = [
     status: "available",
     badge: "popular",
     required_login: false,
+    link: "",
   },
   {
     id: "DokSu",
@@ -102,6 +110,7 @@ export const baseApps = [
     status: "available",
     badge: null,
     required_login: false,
+    link: "",
   },
   {
     id: "PakPi",
@@ -112,6 +121,7 @@ export const baseApps = [
     status: "available",
     badge: null,
     required_login: false,
+    link: "",
   },
   {
     id: "ShanNote",
@@ -119,8 +129,9 @@ export const baseApps = [
     icon: StickyNote,
     gradient: "from-teal-500 to-green-600",
     category: "utilities",
-    status: "coming_soon",
+    status: "available",
     badge: "new",
     required_login: true,
+    link: "",
   },
 ];

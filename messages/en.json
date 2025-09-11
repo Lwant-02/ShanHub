@@ -445,5 +445,14 @@
     "go_home": "Go Home",
     "explore_apps": "Explore Apps",
     "footer_text": "Lost in the digital wilderness? We'll help you find your way back!"
+  },
+  "ShanProverbs": {
+    "title": "Shan Proverbs",
+    "content": "Discover the wisdom and beauty of Shan culture through traditional proverbs. Each proverb carries deep meaning and cultural significance",
+    "search_placeholder": "Search for proverbs...",
+    "all_proverbs": "All Proverbs",
+    "no_proverbs": "No proverbs found matching your search",
+    "proverb": "Proverb",
+    "failed_to_load": "Failed to load proverbs. Please try again later."
   }
 }

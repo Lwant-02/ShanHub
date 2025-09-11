@@ -3,8 +3,6 @@ import { CustomButton } from "@/components/CustomButton";
 
 interface AppCardProps {
   app: App;
-  onLaunch: (appId: string) => void;
-  onRate: (appId: string) => void;
   t: any;
 }
 
@@ -19,7 +17,7 @@ const getBadgeColor = (badge: string | null) => {
   }
 };
 
-export const AppCard = ({ app, onLaunch, onRate, t }: AppCardProps) => {
+export const AppCard = ({ app, t }: AppCardProps) => {
   return (
     <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 group">
       <CardHeader className="pb-4">
@@ -55,7 +53,7 @@ export const AppCard = ({ app, onLaunch, onRate, t }: AppCardProps) => {
             text={t("rate_app")}
             variant="secondary"
             className="w-full"
-            onClick={() => onRate(app.id)}
+            link={`/dashboard/rating/${app.id}`}
             disabled={app.status === "coming_soon"}
           />
           <CustomButton
@@ -64,7 +62,7 @@ export const AppCard = ({ app, onLaunch, onRate, t }: AppCardProps) => {
             }
             variant="primary"
             className="w-full"
-            onClick={() => onLaunch(app.id)}
+            link={app.link ? app.link : `/dashboard/${app.id}`}
             disabled={app.status === "coming_soon"}
           />
         </div>

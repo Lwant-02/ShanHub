@@ -48,10 +48,10 @@ export default async function RootLayout({
               backgroundImage: `radial-gradient(circle 500px at 50% 300px, rgba(16,185,129,0.35), transparent)`,
             }}
           />
-          <NextIntlClientProvider messages={messages}>
+          <NextIntlClientProvider messages={messages} locale={locale}>
             <main className="relative z-10 h-full w-full">
               <Navbar />
-              <div className="max-w-6xl mx-auto xl:px-0 px-3 overflow-x-hidden overflow-hidden">
+              <div className="max-w-6xl mx-auto xl:px-0 px-3 overflow-x-hidden">
                 {children}
               </div>
               <MobileNav />
