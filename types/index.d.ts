@@ -12,6 +12,8 @@ interface App {
   category: string;
   status: string;
   badge: string | null;
+  required_login: boolean;
+  link: string;
 }
 
 interface Post {
@@ -32,4 +34,17 @@ interface Post {
 enum Provider {
   GOOGLE = "google",
   FACEBOOK = "facebook",
+}
+
+interface Proverb {
+  proverb: string;
+}
+
+interface ProverbGroup {
+  proverb_key: string;
+  proverb_list: Proverb[];
+}
+
+interface ProverbsData {
+  all_proverbs: ProverbGroup[];
 }

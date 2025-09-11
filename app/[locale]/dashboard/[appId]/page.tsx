@@ -1,3 +1,4 @@
+import { AppPageContent } from "@/components/features/dashboard/components/AppPageContent";
 import { ClientAppWrapper } from "@/components/features/dashboard/components/ClientAppWrapper";
 
 type AppPageProps = {
@@ -17,7 +18,7 @@ export default async function AppPage({ params }: AppPageProps) {
 
   return (
     <ClientAppWrapper>
-      <div className="text-white">{appId}</div>
+      <AppPageContent appId={appId} />
     </ClientAppWrapper>
   );
 }
