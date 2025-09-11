@@ -53,7 +53,7 @@ export default function DashboardViewPage() {
               {t("all_apps")}
             </h2>
           </div>
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {apps.map((app) => (
               <AppCard key={app.id} app={app} t={t} />
             ))}

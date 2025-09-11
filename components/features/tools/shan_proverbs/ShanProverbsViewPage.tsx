@@ -26,7 +26,9 @@ export const ShanProverbsViewPage = () => {
   useEffect(() => {
     const loadProverbs = async () => {
       try {
-        const response = await fetch("/shan_proverbs.json");
+        const response = await fetch(
+          "/resources/shan_proverbs/shan_proverbs.json"
+        );
         const data = await response.json();
         setProverbsData(data);
       } catch (error) {
