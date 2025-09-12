@@ -48,3 +48,12 @@ interface ProverbGroup {
 interface ProverbsData {
   all_proverbs: ProverbGroup[];
 }
+
+interface DokSu {
+  id: number;
+  title: string;
+}
+
+interface DokSuData {
+  dok_su: DokSu[];
+}
