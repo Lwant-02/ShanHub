@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Spinner } from "@/components/Spinner";
 import { Dok_Su_Titles } from "@/constant/constant";
+import { GradientTitle } from "@/components/GradientTitle";
 
 interface DokSuLyricsDialogProps {
   id: number;
@@ -73,13 +74,13 @@ export const DokSuLyricsDialog = ({
         >
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-white mt-3">
-              ({id}){t("doksu")} - {title}
+              <GradientTitle title={`(${id})${t("doksu")} - ${title}`} />
             </DialogTitle>
             <DialogDescription className="text-xl opacity-90 sr-only">
               Dialog for viewing lyrics
             </DialogDescription>
             <div className="flex justify-center items-center mt-4">
-              <pre className="whitespace-pre-wrap font-primary! text-xl font-semibold max-h-96 overflow-scroll text-blue-400">
+              <pre className="whitespace-pre-wrap font-primary! text-xl font-semibold max-h-96 overflow-scroll">
                 {text}
               </pre>
             </div>

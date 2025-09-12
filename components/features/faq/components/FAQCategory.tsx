@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/accordion";
 import { item } from "../../landing/components/Hero";
 import { CustomButton } from "@/components/CustomButton";
+import { GradientTitle } from "@/components/GradientTitle";
 
 export const FAQCategory = () => {
   const t = useTranslations("FAQPage");
@@ -71,8 +72,8 @@ export const FAQCategory = () => {
                 <div className={`p-3 rounded-xl ${category.bgColor}`}>
                   <Icon className={`w-6 h-6 ${category.color}`} />
                 </div>
-                <h2 className="text-2xl font-semibold text-white">
-                  {t(`${category.key}.title`)}
+                <h2 className="text-2xl font-semibold">
+                  <GradientTitle title={t(`${category.key}.title`)} />
                 </h2>
               </div>
             </div>

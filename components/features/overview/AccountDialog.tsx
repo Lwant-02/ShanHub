@@ -26,6 +26,7 @@ import { useSession } from "@/lib/auth-client";
 import { CustomButton } from "@/components/CustomButton";
 import { SocialIcon } from "@/components/SocialIcon";
 import { formatDate } from "@/lib/utils";
+import { GradientTitle } from "@/components/GradientTitle";
 
 type AccountDialogValues = {
   isDialogOpen: boolean;
@@ -69,8 +70,8 @@ export const AccountDialog = ({
           className="w-full"
         >
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-white ">
-              {originalName} {t("title")}
+            <DialogTitle className="text-2xl font-bold ">
+              <GradientTitle title={`${originalName} ${t("title")}`} />
             </DialogTitle>
             <DialogDescription className="text-xl opacity-90 sr-only">
               {t("subtitle")}

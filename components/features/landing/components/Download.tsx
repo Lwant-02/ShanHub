@@ -5,6 +5,7 @@ import { Download as DownloadIcon, Monitor } from "lucide-react";
 
 import { Button } from "../../../ui/button";
 import AnimateOnview from "@/components/AnimateOnview";
+import { GradientTitle } from "@/components/GradientTitle";
 
 export const Download = () => {
   const t = useTranslations("HomePage.Download");
@@ -43,9 +44,7 @@ export const Download = () => {
         <AnimateOnview>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                {t("title")}
-              </span>
+              <GradientTitle title={t("title")} />
             </h2>
             <p className="text-xl opacity-90 max-w-2xl mx-auto">
               {t("content")}
@@ -80,9 +79,7 @@ export const Download = () => {
         <AnimateOnview>
           <div className="bg-gradient-to-r from-emerald-500/5 to-blue-500/5 rounded-2xl p-8 border border-emerald-500/20">
             <h3 className="text-2xl font-semibold mb-6 text-center">
-              <span className="bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                {t("instructions_title")}
-              </span>
+              <GradientTitle title={t("instructions_title")} />
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>

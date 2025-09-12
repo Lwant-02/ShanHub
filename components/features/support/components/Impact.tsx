@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Code, Server, BookOpen, Users, Heart } from "lucide-react";
 
 import { item } from "../../landing/components/Hero";
+import { GradientTitle } from "@/components/GradientTitle";
 
 export const Impact = () => {
   const t = useTranslations("SupportPage");
@@ -27,9 +28,7 @@ export const Impact = () => {
   return (
     <motion.div variants={item} className="mb-12">
       <h2 className="text-3xl font-bold text-center mb-8">
-        <span className="bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-          {t("impact_title")}
-        </span>
+        <GradientTitle title={t("impact_title")} />
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {impactItems.map((impact, index) => (

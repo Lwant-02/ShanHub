@@ -30,7 +30,7 @@ export const DokSuCard = ({ doksu, index }: DokSuCardProps) => {
               onClick={() => setIsDialogOpen(true)}
               variant="ghost"
               type="button"
-              className="text-sm text-blue-400 hover:underline flex gap-2 justify-end items-center cursor-pointer"
+              className="text-sm hover:underline flex gap-2 justify-end items-center cursor-pointer"
             >
               {t("view_lyrics")}
               <ArrowRight className="w-4 h-4" />

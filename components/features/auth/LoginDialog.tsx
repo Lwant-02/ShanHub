@@ -15,6 +15,7 @@ import { CustomButton } from "@/components/CustomButton";
 import { signIn } from "@/lib/auth-client";
 import { SocialIcon } from "@/components/SocialIcon";
 import { Separator } from "@radix-ui/react-separator";
+import { GradientTitle } from "@/components/GradientTitle";
 
 interface LoginDialogProps {
   open: boolean;
@@ -52,7 +53,7 @@ export const LoginDialog = ({ open, onOpenChange }: LoginDialogProps) => {
         >
           <DialogHeader>
             <DialogTitle className="text-2xl py-2 bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-              {t("title")}
+              <GradientTitle title={t("title")} />
             </DialogTitle>
             <DialogDescription className="text-xl opacity-90">
               {t("sub_title")}

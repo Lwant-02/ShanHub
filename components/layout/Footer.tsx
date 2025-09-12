@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 import AnimateOnview from "../AnimateOnview";
+import { GradientTitle } from "../GradientTitle";
 
 export const Footer = () => {
   const t = useTranslations("HomePage.Footer");
@@ -38,7 +39,7 @@ export const Footer = () => {
             </div>
             <div className="text-start">
               <h3 className="text-3xl py-1 font-bold mb-4 bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                {t("quick_links")}
+                <GradientTitle title={t("quick_links")} />
               </h3>
               <ul className="list-disc list-inside text-gray-400 space-y-2 ml-4">
                 {links.map((link, index) => (
@@ -56,7 +57,7 @@ export const Footer = () => {
             </div>
             <div className="text-start">
               <h3 className="text-3xl py-1 leading-snug font-bold mb-4 bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                {t("terms_and_conditions")}
+                <GradientTitle title={t("terms_and_conditions")} />
               </h3>
               <ul className="list-disc list-inside text-gray-400 space-y-2 ml-4">
                 {terms_policy.map((link, index) => (

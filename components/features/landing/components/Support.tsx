@@ -3,8 +3,8 @@ import { ArrowRight } from "lucide-react";
 
 import AnimateOnview from "@/components/AnimateOnview";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { CustomButton } from "@/components/CustomButton";
+import { GradientTitle } from "@/components/GradientTitle";
 
 export const Support = () => {
   const t = useTranslations("HomePage.Support");
@@ -14,9 +14,7 @@ export const Support = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-3xl p-12 border border-emerald-500/30 backdrop-blur-sm">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                {t("title")}
-              </span>
+              <GradientTitle title={t("title")} />
             </h2>
             <p className="xl:text-2xl text-xl opacity-90 mb-8 max-w-2xl mx-auto">
               {t("content")}
