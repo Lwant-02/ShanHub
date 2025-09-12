@@ -28,6 +28,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CustomButton } from "@/components/CustomButton";
 import { axiosInstance } from "@/config/axios.config";
+import { GradientTitle } from "@/components/GradientTitle";
 
 interface FAQDialogProps {
   open: boolean;
@@ -96,8 +97,8 @@ export const FAQDialog = ({ open, onOpenChange }: FAQDialogProps) => {
           className="w-full"
         >
           <DialogHeader>
-            <DialogTitle className="text-2xl py-2 bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-              {t("title")}
+            <DialogTitle className="text-2xl py-2 ">
+              <GradientTitle title={t("title")} />
             </DialogTitle>
             <DialogDescription className="text-xl opacity-90">
               {t("content")}

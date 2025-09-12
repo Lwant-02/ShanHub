@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/dialog";
 import { developers_contacts } from "@/constant/constant";
 import { useTranslations } from "next-intl";
+import { GradientTitle } from "@/components/GradientTitle";
 
 interface SupportDialogProps {
   open: boolean;
@@ -33,7 +34,7 @@ export const SupportDialog = ({ open, onOpenChange }: SupportDialogProps) => {
               <Coffee className="size-6 text-emerald-400" />
             </div>
             <DialogTitle className="text-2xl font-bold text-white">
-              {t("title")}
+              <GradientTitle title={t("title")} />
             </DialogTitle>
             <DialogDescription className="text-gray-300 text-base">
               {t("content")}

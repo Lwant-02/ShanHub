@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Marquee } from "@/components/Marquee";
 import AnimateOnview from "@/components/AnimateOnview";
 import { TestimonialCard } from "./TestimonialCard";
+import { GradientTitle } from "@/components/GradientTitle";
 
 const testimonials = [
   {
@@ -77,9 +78,7 @@ export const Testimonial = () => {
         <AnimateOnview>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                {t("title")}
-              </span>
+              <GradientTitle title={t("title")} />
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {t("content")}

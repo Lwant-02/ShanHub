@@ -3,13 +3,14 @@ import { useTranslations } from "next-intl";
 import { Users, MessageCircle } from "lucide-react";
 
 import { item } from "../../landing/components/Hero";
+import { GradientTitle } from "@/components/GradientTitle";
 
 export const Header = () => {
   const t = useTranslations("CommunityPage");
   return (
     <motion.div variants={item} className="mb-8 text-center">
       <h1 className="text-4xl py-2 font-bold bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent mb-4">
-        {t("title")}
+        <GradientTitle title={t("title")} />
       </h1>
       <p className="text-gray-400 text-xl mb-6">{t("subtitle")}</p>
 

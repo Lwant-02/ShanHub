@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { BookOpen, Zap, Heart, Users, Shield, Globe } from "lucide-react";
 
 import { item } from "../../landing/components/Hero";
+import { GradientTitle } from "@/components/GradientTitle";
 export const Feature = () => {
   const t = useTranslations("AboutPage");
   const features = [
@@ -40,9 +41,7 @@ export const Feature = () => {
   return (
     <motion.div variants={item} className="mb-12">
       <h2 className="text-3xl font-bold text-center mb-8">
-        <span className="bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-          {t("features_title")}
-        </span>
+        <GradientTitle title={t("features_title")} />
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, index) => (

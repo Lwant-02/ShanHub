@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 
 import { item } from "../../landing/components/Hero";
+import { GradientTitle } from "@/components/GradientTitle";
 
 export const WayToSupport = () => {
   const t = useTranslations("SupportPage");
@@ -48,8 +49,8 @@ export const WayToSupport = () => {
   return (
     <motion.div variants={item} className="mb-12">
       <div className="bg-white/5 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8">
-        <h2 className="text-2xl font-semibold text-blue-400 mb-4">
-          {t("ways_title")}
+        <h2 className="text-2xl font-semibold mb-4">
+          <GradientTitle title={t("ways_title")} />
         </h2>
         <p className="text-gray-300 leading-relaxed text-lg mb-6">
           {t("ways_content")}
