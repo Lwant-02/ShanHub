@@ -18,7 +18,7 @@ export const ClientAppWrapper = ({ children }: ClientAppWrapperProps) => {
   }, [pathName]);
 
   return (
-    <div className="w-full mx-auto min-h-screen py-5 ">
+    <div className="w-full mx-auto min-h-screen py-5">
       <Link
         href="/dashboard"
         className="text-green/80 hover:text-green cursor-pointer mb-4 text-base flex gap-2 justify-center items-center w-fit"

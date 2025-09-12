@@ -454,5 +454,14 @@
     "no_proverbs": "No proverbs found matching your search",
     "proverb": "Proverb",
     "failed_to_load": "Failed to load proverbs. Please try again later."
+  },
+  "DokSu": {
+    "title": "Dok Su",
+    "content": "Currently, there are 36 traditional songs available in ShanHub.",
+    "search_placeholder": "Search for songs...",
+    "no_doksu": "No songs found matching your search",
+    "doksu": "Dok Su",
+    "failed_to_load": "Failed to load songs. Please try again later.",
+    "view_lyrics": "View Lyrics"
   }
 }
