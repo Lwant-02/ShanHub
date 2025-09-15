@@ -12,7 +12,7 @@ export const Footer = () => {
 
   const links = [
     { label: t("dashboard"), href: "/" },
-    { label: t("community"), href: "/community" },
+    // { label: t("community"), href: "/community" },//Remove for now
     { label: t("support"), href: "/support" },
     { label: t("faq"), href: "/faq" },
     { label: t("about"), href: "/about" },

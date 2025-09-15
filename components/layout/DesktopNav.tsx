@@ -1,6 +1,6 @@
 "use client";
 import {
-  Handshake,
+  // Handshake,
   HeartPlus,
   Info,
   LayoutDashboard,
@@ -30,11 +30,11 @@ export const DesktopNav = () => {
       href: "/dashboard",
       icon: LayoutDashboard,
     },
-    {
-      label: t("community"),
-      href: "/community",
-      icon: Handshake,
-    },
+    // {
+    //   label: t("community"),
+    //   href: "/community",
+    //   icon: Handshake,
+    // }, //Remove for now
     {
       label: t("support"),
       href: "/support",

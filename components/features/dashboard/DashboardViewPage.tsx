@@ -17,7 +17,7 @@ export default function DashboardViewPage() {
     description: app(item.id),
   }));
 
-  const recentlyUsed = apps.slice(0, 3);
+  // const recentlyUsed = apps.slice(0, 3);  //Remove for now
 
   return (
     <div className="min-h-screen py-8">
@@ -30,8 +30,8 @@ export default function DashboardViewPage() {
         {/* Header */}
         <Header apps={apps.length} activeUsers={2500} />
 
-        {/* Recently Used */}
-        <motion.div variants={item} className="mb-8">
+        {/* Recently Used -> Remove for now*/}
+        {/* <motion.div variants={item} className="mb-8">
           <div className="flex items-center gap-2 mb-4">
             <Clock className="w-5 h-5 text-emerald-400" />
             <h2 className="text-2xl font-semibold text-white">
@@ -43,7 +43,7 @@ export default function DashboardViewPage() {
               <AppCard key={app.id} app={app} t={t} />
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* All Apps */}
         <motion.div variants={item}>
