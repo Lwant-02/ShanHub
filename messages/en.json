@@ -463,5 +463,36 @@
     "doksu": "Dok Su",
     "failed_to_load": "Failed to load songs. Please try again later.",
     "view_lyrics": "View Lyrics"
+  },
+  "ShanWordSorting": {
+    "title": "Shan Word Sorting",
+    "content": "Sort Shan words by syllable work break under the rules of Shan dictionary.",
+    "list_placeholder": "Enter Shan words separated by spaces, commas (,), Shan commas (၊, ။), new lines, or semicolons (;).",
+    "list_label": "List of words",
+    "sort_action": "Sort",
+    "sorted_count": "Found {count} unique words",
+    "hint": "Sorted {count} words according to Shan dictionary order:",
+    "compare_label": "Compare two words",
+    "word_a": "Enter first Shan word",
+    "word_b": "Enter second Shan word",
+    "compare_action": "Compare",
+    "compare_result": "Comes first",
+    "use_example": "Use Example",
+    "clear": "Clear"
+  },
+  "ShanTranslit": {
+    "title": "Shan Transliteration",
+    "content": "Convert Shan script to Latin script and vice versa.",
+    "mode_tai2eng": "Shan to Latin",
+    "mode_tai2eng_nt": "Shan to Latin (No Tone)",
+    "mode_eng2tai": "Latin to Shan",
+    "input_label": "Input",
+    "output_label": "Output",
+    "convert": "Convert",
+    "ph_tai2eng": "Enter Shan text to convert to Latin",
+    "ph_tai2eng_nt": "Enter Shan text to convert to Latin (No Tone)",
+    "ph_eng2tai": "Enter Latin text to convert to Shan",
+    "use_example": "Use Example",
+    "clear": "Clear"
   }
 }

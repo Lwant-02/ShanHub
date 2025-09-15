@@ -2,7 +2,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import {
-  Handshake,
+  // Handshake,
   HeartPlus,
   Info,
   LayoutDashboard,
@@ -40,11 +40,11 @@ export const MobileDrawer = ({ onOpenChange, open }: MobileDrawerProps) => {
       href: "/dashboard",
       icon: LayoutDashboard,
     },
-    {
-      label: t("community"),
-      href: "/community",
-      icon: Handshake,
-    },
+    // {
+    //   label: t("community"),
+    //   href: "/community",
+    //   icon: Handshake,
+    // },//Remove for now
     {
       label: t("support"),
       href: "/support",

@@ -22,12 +22,12 @@ export const Contact = () => {
         </h3>
         <p className="text-gray-300 mb-6 max-w-2xl mx-auto">{t("subtitle")}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <CustomButton
+          {/* <CustomButton
             text={t("join_community")}
             icon={<Users className="w-4 h-4 mr-2" />}
             variant="primary"
             link="/community"
-          />
+          /> */}
           <CustomButton
             text={t("contact_us")}
             icon={<Headset className="w-4 h-4 mr-2" />}

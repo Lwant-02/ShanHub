@@ -27,12 +27,12 @@ export const CTA = () => {
             icon={<Coffee className="w-4 h-4 mr-2" />}
             variant="primary"
           />
-          <CustomButton
+          {/* <CustomButton
             text={t("join_community")}
             icon={<Users className="w-4 h-4 mr-2" />}
             variant="secondary"
             link="/community"
-          />
+          /> */}
         </div>
       </div>
       <SupportDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
