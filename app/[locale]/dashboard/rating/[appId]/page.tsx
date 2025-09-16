@@ -6,6 +6,6 @@ export const metadata = {
   description: "Rate ShanHub apps and help us improve",
 };
 
-export default function RatingPage() {
+export default async function RatingPage() {
   return <RatingViewPage />;
 }

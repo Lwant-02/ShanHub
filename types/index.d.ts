@@ -57,3 +57,17 @@ interface DokSu {
 interface DokSuData {
   dok_su: DokSu[];
 }
+
+interface Review {
+  id: string;
+  userId: string;
+  user: {
+    name: string;
+    image: string;
+  };
+  appId: string;
+  rating: number;
+  review: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
